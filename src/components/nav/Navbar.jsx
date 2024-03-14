@@ -20,7 +20,7 @@ const Navbar = () => {
     >
       <figure className="flex w-full items-center justify-between self-start lg:w-fit">
         <span
-          className="icon-brand h-12 w-12 bg-black lg:hidden"
+          className="icon-brand icon-[icon-park-outline--hamburger-button] h-12 w-12 bg-black lg:hidden"
           onClick={handleMenu}
         />
         <Link href="/" className="flex w-fit items-center gap-3">

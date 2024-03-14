@@ -9,17 +9,17 @@ import DatePicker from '../date/DatePicker'
 
 const FormTrip = () => {
   return (
-    <form className="border-brand bg-brand relative mb-32 flex w-fit gap-1 rounded-3xl border-4">
+    <form className="border-brand bg-brand relative mx-auto mb-32 flex w-full flex-col gap-1 rounded-3xl border-4 md:w-[80%] lg:w-fit lg:flex-row ">
       <label
         htmlFor="destiny"
-        className="flex select-none items-center gap-3 rounded-l-3xl rounded-r-none border-transparent bg-white px-3 focus-within:border-white"
+        className="flex select-none items-center gap-3 overflow-hidden rounded-t-3xl border-transparent bg-white px-3 focus-within:border-white lg:rounded-l-3xl"
       >
         <span className="bg-brand icon-[solar--map-point-bold] h-8 w-8" />
         <Select
           defaultValue="cartagena"
           className="select-none border-0 border-none outline-none"
         >
-          <SelectTrigger className="w-[120px] rounded-none border-transparent outline-none selection:outline-none">
+          <SelectTrigger className="w-full rounded-none border-transparent px-0 outline-none selection:outline-none">
             <SelectValue placeholder="Destino" />
           </SelectTrigger>
           <SelectContent className="outline-none">
@@ -37,7 +37,7 @@ const FormTrip = () => {
         <DatePicker />
       </label>
 
-      <div className="flex items-center bg-white px-3">
+      <div className="flex items-center gap-3 bg-white px-3">
         <span className="bg-brand icon-[material-symbols--person-2-rounded] h-8 w-8" />
         <label htmlFor="adults">
           <input
@@ -67,7 +67,7 @@ const FormTrip = () => {
 
       <label
         htmlFor="rooms"
-        className="flex items-center gap-3 rounded-r-3xl bg-white px-3"
+        className="flex items-center gap-3 rounded-b-3xl bg-white px-3 lg:rounded-r-3xl"
       >
         <span className="bg-brand icon-[cbi--roomsother] h-8 w-8" />
         <input

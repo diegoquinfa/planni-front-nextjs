@@ -13,7 +13,7 @@ const HomeCarousel = () => {
       opts={{
         align: 'start'
       }}
-      className="h-fit w-[80%] max-w-[900px]"
+      className="m-auto h-fit w-[80%]  2xl:w-full"
     >
       <CarouselContent>
         {Array.from({ length: 20 }).map((_, index) => (

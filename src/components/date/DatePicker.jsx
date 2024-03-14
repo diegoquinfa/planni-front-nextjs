@@ -19,12 +19,16 @@ const DatePicker = () => {
     <>
       <Popover>
         <PopoverTrigger asChild>
-          <Button id="date" variant="ghost" className="w-44 rounded-none">
+          <Button
+            id="date"
+            variant="ghost"
+            className="w-full rounded-none text-left"
+          >
             {date?.from ? (
               date.to ? (
-                <>
+                <span className="w-full text-left">
                   {format(date.from, 'MM/dd/y')} - {format(date.to, 'MM/dd/y')}
-                </>
+                </span>
               ) : (
                 format(date.from, 'MM/dd/yyyy')
               )
