@@ -34,9 +34,9 @@ const Navbar = () => {
         className={`${menu} w-full flex-col gap-5 transition-all lg:flex lg:h-full lg:w-fit lg:flex-row lg:overflow-auto`}
       >
         <ul className="flex flex-col gap-2 lg:flex-row">
-          <NavLink>Inicio</NavLink>
-          <NavLink>Paquetes</NavLink>
-          <NavLink>Nosotros</NavLink>
+          <NavLink href="/">Inicio</NavLink>
+          <NavLink href="/packages">Paquetes</NavLink>
+          <NavLink href="/">Nosotros</NavLink>
         </ul>
         <NavUser />
       </div>

@@ -12,7 +12,7 @@ const FormTrip = () => {
     <form className="border-brand bg-brand relative mx-auto mb-32 flex w-full flex-col gap-1 rounded-3xl border-4 md:w-[80%] lg:w-fit lg:flex-row ">
       <label
         htmlFor="destiny"
-        className="flex select-none items-center gap-3 overflow-hidden rounded-t-3xl border-transparent bg-white px-3 focus-within:border-white lg:rounded-l-3xl"
+        className="flex select-none items-center gap-3 overflow-hidden rounded-t-3xl border-transparent bg-white px-3 focus-within:border-white lg:rounded-l-3xl lg:rounded-tr-none"
       >
         <span className="bg-brand icon-[solar--map-point-bold] h-8 w-8" />
         <Select
@@ -67,7 +67,7 @@ const FormTrip = () => {
 
       <label
         htmlFor="rooms"
-        className="flex items-center gap-3 rounded-b-3xl bg-white px-3 lg:rounded-r-3xl"
+        className="flex items-center gap-3 rounded-b-3xl bg-white px-3 lg:rounded-r-3xl lg:rounded-bl-none"
       >
         <span className="bg-brand icon-[cbi--roomsother] h-8 w-8" />
         <input

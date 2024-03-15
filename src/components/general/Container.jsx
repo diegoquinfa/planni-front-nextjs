@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 const Container = ({ children }) => {
   return (
-    <div className="flex w-full max-w-[1280px] flex-col gap-8 p-8">
+    <div className="mx-auto flex w-full max-w-[1280px] flex-col gap-8 p-8">
       {children}
     </div>
   )
