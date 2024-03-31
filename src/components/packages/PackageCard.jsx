@@ -25,7 +25,7 @@ export const PackageCard = () => {
           <p className="text-sm font-bold text-gray-600">$ 1.899.999</p>
           <Link
             className="rounded-2xl bg-brand px-8 py-1 font-bold text-white"
-            href="/packages"
+            href="/packages/1"
           >
             Ver más
           </Link>
