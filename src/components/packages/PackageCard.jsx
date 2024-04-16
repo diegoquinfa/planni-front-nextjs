@@ -19,7 +19,6 @@ export const PackageCard = () => {
       <div className="flex h-fit w-full flex-col justify-between gap-1 p-2">
         <div>
           <h2 className="text-xl font-bold text-gray-800">Hotel 1</h2>
-          <p className="text-xs font-bold text-gray-400">Foursquere</p>
         </div>
         <div className="flex items-center justify-between">
           <p className="text-sm font-bold text-gray-600">$ 1.899.999</p>
