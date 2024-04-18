@@ -27,9 +27,9 @@ const Footer = () => {
                   </button>
                 </div>
                 <div className="flex gap-2">
-                  <span className="icon-[mdi--facebook-box] h-16 w-16" />
-                  <span className="icon-[mdi--instagram] h-16 w-16" />
-                  <span className="icon-[mage--x-square] h-16 w-16" />
+                  <span className="icon-[mdi--facebook-box] h-14 w-14" />
+                  <span className="icon-[mdi--instagram] h-14 w-14" />
+                  <span className="icon-[mage--x-square] h-14 w-14" />
                 </div>
               </label>
             </form>

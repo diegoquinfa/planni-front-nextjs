@@ -16,7 +16,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`flex flex-col ${inNav} items-center p-4 lg:flex-row lg:justify-between lg:gap-5`}
+      className={`flex flex-col ${inNav} items-center py-4 px-8 lg:flex-row lg:justify-between lg:gap-5`}
     >
       <figure className="flex w-full items-center justify-between self-start lg:w-fit">
         <span
@@ -26,7 +26,7 @@ const Navbar = () => {
         <Link href="/" className="flex w-fit items-center gap-3">
           <div className="flex w-fit items-center gap-3">
             <img src="/logo.svg" alt="logo" className="h-20 w-20" />
-            <h2 className="text-brand w-fit text-3xl font-bold">PLANNI</h2>
+            <h2 className="w-fit text-3xl font-bold text-brand">PLANNI</h2>
           </div>
         </Link>
       </figure>

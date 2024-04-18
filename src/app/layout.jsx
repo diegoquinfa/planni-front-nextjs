@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
   console.log(MPLUSRounded.className)
   return (
     <html lang="es">
-      <body className={MPLUSRounded.className + ' ' + 'bg-gray-100'}>
+      <body className={MPLUSRounded.className + ' ' + 'bg-[#D9D9D9]'}>
         {children}
       </body>
     </html>
