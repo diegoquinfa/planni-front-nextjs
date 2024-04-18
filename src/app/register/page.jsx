@@ -1,7 +1,7 @@
 const page = () => {
   return (
     <div className="mx-auto max-w-7xl ">
-      <div className="flex h-screen flex-col-reverse items-center justify-center gap-5 md:flex-row md:gap-12">
+      <div className="flex h-screen flex-col-reverse items-center justify-center gap-5  md:flex-row md:gap-12">
         <div className="flex justify-center w-full md:w-auto h-full bg-white rounded-t-3xl md:rounded-none">
           <form className="flex flex-col items-center justify-center gap-7 p-4 w-[90%] md:w-[90%]">
             <h2 className="w-fit justify-center text-3xl font-extrabold text-brand">

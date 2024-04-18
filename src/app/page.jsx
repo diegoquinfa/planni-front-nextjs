@@ -13,7 +13,7 @@ export default function Home() {
       </header>
       <main className="flex min-h-dvh flex-col items-center justify-start bg-[#D9D9D9]">
         <Container>
-          <Banner src="/img/cartagena.jpeg" className="font-bold text-5xl">
+          <Banner src="/img/cartagena.jpeg">
             Deja que creemos las <span className="text-brand">vacaciones</span>{' '}
             de tus sueños
           </Banner>

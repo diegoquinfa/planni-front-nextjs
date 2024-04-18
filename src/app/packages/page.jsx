@@ -6,9 +6,9 @@ import { PackageCard } from '@/components/packages/PackageCard'
 export default function Packages() {
   return (
     <Container>
-      <Banner src="/img/destino-cartagena.jpg" className="font-bold text-7xl">Cartagena</Banner>
+      <Banner src="/img/destino-cartagena.jpg">Cartagena</Banner>
       <FormTrip />
-      <h2 className="flex h-full w-full self-start text-5xl font-bold">
+      <h2 className="flex h-full w-full self-start text-4xl font-bold">
         Paquetes
       </h2>
       {/* <div className="md  mx-auto grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4"> */}
