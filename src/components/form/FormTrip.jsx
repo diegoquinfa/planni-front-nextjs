@@ -19,11 +19,11 @@ const FormTrip = () => {
           defaultValue="cartagena"
           className="select-none border-0 border-none outline-none"
         >
-          <SelectTrigger className="w-full rounded-none border-transparent px-0 outline-none selection:outline-none">
+          <SelectTrigger className="w-full rounded-none border-transparent px-0 outline-none selection:outline-none font-bold">
             <SelectValue placeholder="Destino" />
           </SelectTrigger>
-          <SelectContent className="outline-none">
-            <SelectItem value="cartagena" className="outline-none">
+          <SelectContent className="outline-none font-bold">
+            <SelectItem value="cartagena" className="outline-none font-bold">
               Cartagena
             </SelectItem>
           </SelectContent>
@@ -31,9 +31,9 @@ const FormTrip = () => {
       </label>
       <label
         htmlFor="date_trip"
-        className="flex items-center gap-3 bg-white px-3"
+        className="flex items-center gap-3 bg-white px-3 font-bold"
       >
-        <span className="bg-brand icon-[material-symbols--calendar-today] h-8 w-8" />
+        <span className="bg-brand icon-[material-symbols--calendar-today] h-8 w-8 font-bold" />
         <DatePicker />
       </label>
 

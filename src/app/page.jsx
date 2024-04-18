@@ -13,14 +13,14 @@ export default function Home() {
       </header>
       <main className="flex min-h-dvh flex-col items-center justify-start bg-[#D9D9D9]">
         <Container>
-          <Banner src="/img/cartagena.jpeg">
+          <Banner src="/img/cartagena.jpeg" className="font-bold text-5xl">
             Deja que creemos las <span className="text-brand">vacaciones</span>{' '}
             de tus sueños
           </Banner>
           <FormTrip />
-          <h2 className="text-4xl font-bold text-gray-900">Recomendados</h2>
+          <h2 className="text-4xl font-bold">Recomendados</h2>
           <HomeCarousel />
-          <h2 className="text-4xl font-bold text-gray-900">Destinos</h2>
+          <h2 className="text-4xl font-bold">Destinos</h2>
           <figure className="relative">
             <img
               src="/img/destino-cartagena.jpg"

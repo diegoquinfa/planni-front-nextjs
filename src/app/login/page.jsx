@@ -13,7 +13,7 @@ const page = () => {
               Inicio de sesión
             </h2>
             <div className="w-full ">
-              <p className="inline rounded-tl-lg rounded-tr-lg bg-[#f1f1f1] px-1">
+              <p className="inline rounded-tl-lg rounded-tr-lg font-bold bg-[#f1f1f1] px-1">
                 Correo electronico
               </p>
               <input
@@ -24,7 +24,7 @@ const page = () => {
               />
             </div>
             <div className="w-full">
-              <p className=" inline rounded-tl-lg rounded-tr-lg bg-[#f1f1f1] px-1">
+              <p className=" inline rounded-tl-lg rounded-tr-lg font-bold bg-[#f1f1f1] px-1">
                 Contraseña
               </p>
               <input
@@ -39,7 +39,7 @@ const page = () => {
             </button>
             <p>
               ¿Todavía no tienes cuenta? -{' '}
-              <a href="/" className="text-brand hover:underline">
+              <a href="/register" className="text-brand hover:underline">
                 Registrate
               </a>
             </p>
