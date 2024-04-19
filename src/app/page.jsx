@@ -11,16 +11,16 @@ export default function Home() {
       <header className="">
         <Navbar />
       </header>
-      <main className="flex min-h-dvh flex-col items-center justify-start bg-[#D9D9D9]">
+      <main className="flex min-h-dvh flex-col items-center justify-start bg-[#D9D9D9] ">
         <Container>
           <Banner src="/img/cartagena.jpeg">
             Deja que creemos las <span className="text-brand">vacaciones</span>{' '}
             de tus sueños
           </Banner>
           <FormTrip />
-          <h2 className="text-4xl font-bold">Recomendados</h2>
+          <h2 className="w-fit text-2xl md:text-3xl font-bold">Recomendados</h2>
           <HomeCarousel />
-          <h2 className="text-4xl font-bold">Destinos</h2>
+          <h2 className="w-fit text-2xl md:text-3xl font-bold">Destinos</h2>
           <figure className="relative">
             <img
               src="/img/destino-cartagena.jpg"
@@ -28,7 +28,7 @@ export default function Home() {
               className="aspect-video h-full w-full rounded-3xl object-cover brightness-75"
             />
             <figcaption className="absolute left-0 top-0 h-full w-full items-center">
-              <h2 className="flex h-full w-full items-center justify-center text-5xl font-bold text-white">
+              <h2 className="flex text-3xl md:text-5xl h-full w-full items-center justify-center font-bold text-white">
                 Cartagena
               </h2>
             </figcaption>

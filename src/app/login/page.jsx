@@ -15,25 +15,25 @@ const page = () => {
               Inicio de sesión
             </h2>
             <div className="w-full ">
-              <p className="inline rounded-tl-lg rounded-tr-lg bg-[#f1f1f1] px-1 font-bold">
+              <p className="inline px-1 font-bold">
                 Correo electronico
               </p>
               <input
                 id="email"
                 type="email"
                 placeholder="Example@gmail.com"
-                className="w-full rounded-bl-lg rounded-br-lg rounded-tr-lg bg-[#f1f1f1] px-2 py-1 outline-none"
+                className="w-full rounded-lg bg-[#f1f1f1] px-2 py-1 outline-none"
               />
             </div>
             <div className="w-full">
-              <p className=" inline rounded-tl-lg rounded-tr-lg bg-[#f1f1f1] px-1 font-bold">
+              <p className=" inline px-1 font-bold">
                 Contraseña
               </p>
               <input
                 id="password"
                 type="password"
                 placeholder="*****"
-                className="w-full rounded-bl-lg rounded-br-lg rounded-tr-lg bg-[#f1f1f1] px-2 py-1 outline-none"
+                className="w-full rounded-lg bg-[#f1f1f1] px-2 py-1 outline-none"
               />
             </div>
             <button className=" rounded-lg bg-[#D9D9D9] px-6 py-1 font-extrabold hover:bg-neutral-400">

@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="flex h-fit w-full bg-white ">
       <Container>
         <div className="flex flex-col gap-9 md:flex-row md:justify-around">
-          <h2 className="self-center text-5xl font-bold">PLANNI</h2>
+          <h2 className="self-center text-4xl md:text-5xl font-bold">PLANNI</h2>
           <div>
             <form>
               <label htmlFor="email" className="flex flex-col gap-4 max-md:items-center">
