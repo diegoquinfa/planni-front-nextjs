@@ -22,7 +22,7 @@ const DatePicker = () => {
           <Button
             id="date"
             variant="ghost"
-            className="w-full rounded-none text-left"
+            className="w-full rounded-none text-left p-0"
           >
             {date?.from ? (
               date.to ? (

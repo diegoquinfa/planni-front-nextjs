@@ -3,13 +3,13 @@ import Container from '../general/Container'
 
 const Footer = () => {
   return (
-    <footer className="flex h-fit w-full items-center justify-center bg-white ">
+    <footer className="flex h-fit w-full bg-white ">
       <Container>
-        <div className="flex flex-col gap-8 md:flex-row md:justify-between">
+        <div className="flex flex-col gap-9 md:flex-row md:justify-around">
           <h2 className="self-center text-5xl font-bold">PLANNI</h2>
           <div>
             <form>
-              <label htmlFor="email" className="flex flex-col gap-2">
+              <label htmlFor="email" className="flex flex-col gap-4 max-md:items-center">
                 <p>Suscribete para que recibas todas las novedades</p>
                 <div className="flex gap-2">
                   <input
@@ -26,10 +26,10 @@ const Footer = () => {
                     SUSCRIBETE
                   </button>
                 </div>
-                <div className="flex gap-2">
-                  <span className="icon-[mdi--facebook-box] h-14 w-14" />
-                  <span className="icon-[mdi--instagram] h-14 w-14" />
-                  <span className="icon-[mage--x-square] h-14 w-14" />
+                <div className="flex gap-2 ">
+                  <span className="icon-[mdi--facebook-box] h-12 w-12" />
+                  <span className="icon-[mdi--instagram] h-12 w-12" />
+                  <span className="icon-[mage--x-square] h-12 w-12" />
                 </div>
               </label>
             </form>

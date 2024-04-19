@@ -8,7 +8,7 @@ import Navbar from '@/components/nav/Navbar'
 export default function Home() {
   return (
     <>
-      <header className="bg-white">
+      <header className="">
         <Navbar />
       </header>
       <main className="flex min-h-dvh flex-col items-center justify-start bg-[#D9D9D9]">
