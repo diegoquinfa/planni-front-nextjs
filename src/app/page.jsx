@@ -8,7 +8,7 @@ import Navbar from '@/components/nav/Navbar'
 export default function Home() {
   return (
     <>
-      <header className="">
+      <header>
         <Navbar />
       </header>
       <main className="flex min-h-dvh flex-col items-center justify-start bg-[#D9D9D9] ">
@@ -18,9 +18,9 @@ export default function Home() {
             de tus sueños
           </Banner>
           <FormTrip />
-          <h2 className="w-fit text-2xl md:text-3xl font-bold">Recomendados</h2>
+          <h2 className="w-fit text-2xl font-bold md:text-3xl">Recomendados</h2>
           <HomeCarousel />
-          <h2 className="w-fit text-2xl md:text-3xl font-bold">Destinos</h2>
+          <h2 className="w-fit text-2xl font-bold md:text-3xl">Destinos</h2>
           <figure className="relative">
             <img
               src="/img/destino-cartagena.jpg"
@@ -28,7 +28,7 @@ export default function Home() {
               className="aspect-video h-full w-full rounded-3xl object-cover brightness-75"
             />
             <figcaption className="absolute left-0 top-0 h-full w-full items-center">
-              <h2 className="flex text-3xl md:text-5xl h-full w-full items-center justify-center font-bold text-white">
+              <h2 className="flex h-full w-full items-center justify-center text-3xl font-bold text-white md:text-5xl">
                 Cartagena
               </h2>
             </figcaption>

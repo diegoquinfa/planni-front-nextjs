@@ -9,12 +9,10 @@ import DatePicker from '../date/DatePicker'
 
 const FormTrip = () => {
   return (
-    <form className="relative mx-auto mb-32 flex w-full flex-col gap-1 rounded-2xl lg:rounded-3xl border-4 border-brand bg-brand md:w-[80%] lg:w-fit lg:flex-row ">
-      <div className="flex items-center justify-center gap-3 rounded-t-2xl lg:rounded-l-3xl lg:rounded-none bg-white px-1">
+    <form className="relative mx-auto mb-32 flex w-full flex-col gap-1 rounded-2xl border-4 border-brand bg-brand md:w-[80%] lg:w-fit lg:flex-row lg:rounded-3xl ">
+      <div className="flex items-center justify-center gap-3 rounded-t-2xl bg-white px-1 lg:rounded-none lg:rounded-l-3xl">
         <span className="icon-[solar--map-point-bold] h-7 w-7 bg-brand" />
-        <label
-          htmlFor="destiny"
-        >
+        <label htmlFor="destiny">
           <Select
             defaultValue="cartagena"
             className="select-none border-0 border-none outline-none"
@@ -65,7 +63,7 @@ const FormTrip = () => {
         </label>
       </div>
 
-      <div className="flex items-center justify-center gap-3 bg-white rounded-b-2xl lg:rounded-r-3xl lg:rounded-none pl-1 pr-2">
+      <div className="flex items-center justify-center gap-3 rounded-b-2xl bg-white pl-1 pr-2 lg:rounded-none lg:rounded-r-3xl">
         <span className="icon-[cbi--roomsother] h-7 w-7 bg-brand" />
         <label htmlFor="rooms">
           <input
@@ -75,7 +73,7 @@ const FormTrip = () => {
             min={1}
             defaultValue={1}
             id="rooms"
-            className="w-9 content border-transparent bg-white outline-none focus:outline-none"
+            className="content w-9 border-transparent bg-white outline-none focus:outline-none"
           />
           <span className="font-bold">Habitaciones</span>
         </label>

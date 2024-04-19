@@ -8,9 +8,7 @@ const page = () => {
               Crear cuenta
             </h2>
             <div className="w-full">
-              <p className="inline px-1 font-bold">
-                Correo electronico
-              </p>
+              <p className="inline px-1 font-bold">Correo electronico</p>
               <input
                 id="email"
                 type="email"
@@ -19,9 +17,7 @@ const page = () => {
               />
             </div>
             <div className="w-full">
-              <p className=" inline px-1 font-bold">
-                Contraseña
-              </p>
+              <p className=" inline px-1 font-bold">Contraseña</p>
               <input
                 id="password"
                 type="password"
@@ -30,9 +26,7 @@ const page = () => {
               />
             </div>
             <div className="w-full">
-              <p className=" inline px-1 font-bold">
-                Repite la contraseña
-              </p>
+              <p className=" inline px-1 font-bold">Repite la contraseña</p>
               <input
                 id="password"
                 type="password"

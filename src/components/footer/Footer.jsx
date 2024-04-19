@@ -6,10 +6,13 @@ const Footer = () => {
     <footer className="flex h-fit w-full bg-white ">
       <Container>
         <div className="flex flex-col gap-9 md:flex-row md:justify-around">
-          <h2 className="self-center text-4xl md:text-5xl font-bold">PLANNI</h2>
+          <h2 className="self-center text-4xl font-bold md:text-5xl">PLANNI</h2>
           <div>
             <form>
-              <label htmlFor="email" className="flex flex-col gap-4 max-md:items-center">
+              <label
+                htmlFor="email"
+                className="flex flex-col gap-4 max-md:items-center"
+              >
                 <p>Suscribete para que recibas todas las novedades</p>
                 <div className="flex gap-2">
                   <input

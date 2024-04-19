@@ -32,7 +32,6 @@ const Navbar = () => {
             />
             <h2 className="w-fit text-3xl font-bold text-brand">PLANNI</h2>
           </div>
-          
         </Link>
       </figure>
       <div
