@@ -16,29 +16,36 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`flex flex-col ${inNav} items-center p-4 lg:flex-row lg:justify-between lg:gap-5`}
+      className={`flex flex-col ${inNav} items-center bg-white px-7 py-4 max-lg:rounded-b-xl lg:flex-row lg:justify-between lg:gap-5`}
     >
       <figure className="flex w-full items-center justify-between self-start lg:w-fit">
         <span
-          className="icon-brand icon-[icon-park-outline--hamburger-button] h-12 w-12 bg-black lg:hidden"
+          className="icon-brand icon-[icon-park-outline--hamburger-button] h-8 w-8 lg:hidden"
           onClick={handleMenu}
         />
         <Link href="/" className="flex w-fit items-center gap-3">
           <div className="flex w-fit items-center gap-3">
-            <img src="/logo.svg" alt="logo" className="h-20 w-20" />
-            <h2 className="text-brand w-fit text-3xl font-bold">PLANNI</h2>
+            <img
+              src="/logo.svg"
+              alt="logo"
+              className="h-14 w-14 max-lg:hidden "
+            />
+            <h2 className="w-fit text-3xl font-bold text-brand">PLANNI</h2>
           </div>
         </Link>
       </figure>
       <div
-        className={`${menu} w-full flex-col gap-5 transition-all lg:flex lg:h-full lg:w-fit lg:flex-row lg:overflow-auto`}
+        className={`${menu} flex w-full flex-col items-center gap-3 transition-all sm:w-[40%] md:w-[50%] lg:h-full lg:w-fit `}
       >
-        <ul className="flex flex-col gap-2 lg:flex-row">
-          <NavLink href="/">Inicio</NavLink>
-          <NavLink href="/packages">Paquetes</NavLink>
-          <NavLink href="/">Nosotros</NavLink>
-        </ul>
-        <NavUser />
+        <img src="/logo.svg" alt="logo" className="h-14 w-14 lg:hidden" />
+        <div className="flex w-full flex-col-reverse items-center justify-center gap-4 lg:flex-row">
+          <div className="flex w-full flex-col gap-2 px-1 lg:flex-row">
+            <NavLink href="/">Inicio</NavLink>
+            <NavLink href="/packages">Paquetes</NavLink>
+            <NavLink href="/">Nosotros</NavLink>
+          </div>
+          <NavUser />
+        </div>
       </div>
     </nav>
   )

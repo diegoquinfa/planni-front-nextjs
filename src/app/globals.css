@@ -8,7 +8,7 @@
     --foreground: 224 71.4% 4.1%;
 
     --brand-color: #d33c25;
-    --brand-color-light: rgba(211, 60, 37, .1);
+    --brand-color-light: rgba(211, 60, 37, 0.1);
 
     --card: 0 0% 100%;
     --card-foreground: 224 71.4% 4.1%;
@@ -36,6 +36,7 @@
     --ring: 224 71.4% 4.1%;
 
     --radius: 0.5rem;
+    --text-s: #3e3e3e;
   }
 
   .dark {

@@ -2,16 +2,16 @@ import Link from 'next/link'
 
 const NavUser = () => {
   return (
-    <div className="flex flex-col gap-2 lg:flex-row">
+    <div className="flex h-full w-full flex-col gap-2 p-1 lg:flex-row">
       <Link
         href="/register"
-        className="border-brand text-brand hover:bg-brand-light hover:text-brand rounded-3xl border-2 py-1 text-center transition-all duration-300 ease-in-out lg:w-40"
+        className="w-full rounded-3xl border-2 border-brand p-2 text-center text-brand transition-all duration-300 ease-in-out hover:scale-105 hover:bg-brand-light lg:w-[120px]"
       >
         Crear cuenta
       </Link>
       <Link
         href="/login"
-        className="border-brand bg-brand hover:bg-brand-light hover:text-brand rounded-3xl border-2 py-1 text-center text-white transition-all duration-300 ease-in-out  lg:w-40 "
+        className="w-full rounded-3xl border-2 border-brand bg-brand p-2 text-center text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-brand-light hover:text-brand lg:w-[120px]"
       >
         Iniciar sesión
       </Link>

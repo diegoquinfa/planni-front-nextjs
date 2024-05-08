@@ -9,36 +9,34 @@ import DatePicker from '../date/DatePicker'
 
 const FormTrip = () => {
   return (
-    <form className="border-brand bg-brand relative mx-auto mb-32 flex w-full flex-col gap-1 rounded-3xl border-4 md:w-[80%] lg:w-fit lg:flex-row ">
-      <label
-        htmlFor="destiny"
-        className="flex select-none items-center gap-3 overflow-hidden rounded-t-3xl border-transparent bg-white px-3 focus-within:border-white lg:rounded-l-3xl lg:rounded-tr-none"
-      >
-        <span className="bg-brand icon-[solar--map-point-bold] h-8 w-8" />
-        <Select
-          defaultValue="cartagena"
-          className="select-none border-0 border-none outline-none"
-        >
-          <SelectTrigger className="w-full rounded-none border-transparent px-0 outline-none selection:outline-none">
-            <SelectValue placeholder="Destino" />
-          </SelectTrigger>
-          <SelectContent className="outline-none">
-            <SelectItem value="cartagena" className="outline-none">
-              Cartagena
-            </SelectItem>
-          </SelectContent>
-        </Select>
-      </label>
-      <label
-        htmlFor="date_trip"
-        className="flex items-center gap-3 bg-white px-3"
-      >
-        <span className="bg-brand icon-[material-symbols--calendar-today] h-8 w-8" />
-        <DatePicker />
-      </label>
+    <form className="relative mx-auto mb-32 flex w-full flex-col gap-1 rounded-2xl border-4 border-brand bg-brand md:w-[80%] lg:w-fit lg:flex-row lg:rounded-3xl ">
+      <div className="flex items-center justify-center gap-3 rounded-t-2xl bg-white px-1 lg:rounded-none lg:rounded-l-3xl">
+        <span className="icon-[solar--map-point-bold] h-7 w-7 bg-brand" />
+        <label htmlFor="destiny">
+          <Select
+            defaultValue="cartagena"
+            className="select-none border-0 border-none outline-none"
+          >
+            <SelectTrigger className="w-full rounded-none border-transparent px-0 font-bold outline-none selection:outline-none">
+              <SelectValue placeholder="Destino" />
+            </SelectTrigger>
+            <SelectContent className="font-bold outline-none">
+              <SelectItem value="cartagena" className="font-bold">
+                Cartagena
+              </SelectItem>
+            </SelectContent>
+          </Select>
+        </label>
+      </div>
+      <div className="flex items-center justify-center gap-3 bg-white px-1">
+        <span className="icon-[material-symbols--calendar-today] h-7 w-7 bg-brand" />
+        <label htmlFor="date_trip">
+          <DatePicker />
+        </label>
+      </div>
 
-      <div className="flex items-center gap-3 bg-white px-3">
-        <span className="bg-brand icon-[material-symbols--person-2-rounded] h-8 w-8" />
+      <div className="flex items-center justify-center gap-3 bg-white px-1">
+        <span className="icon-[material-symbols--person-2-rounded] h-7 w-7 bg-brand" />
         <label htmlFor="adults">
           <input
             type="number"
@@ -47,11 +45,11 @@ const FormTrip = () => {
             min={1}
             defaultValue={1}
             id="adults"
-            className="h-full w-9 border-transparent bg-white outline-none focus:outline-none"
+            className="w-9 border-transparent bg-white outline-none focus:outline-none"
           />
+          <span className="font-bold">Adultos</span>
         </label>
-        <span className="font-bold">Adultos</span>
-        <label htmlFor="kids" className="ml-3">
+        <label htmlFor="kids">
           <input
             type="number"
             name="kids"
@@ -59,45 +57,42 @@ const FormTrip = () => {
             min={0}
             defaultValue={0}
             id="kids"
-            className="h-full w-9 border-transparent bg-white outline-none focus:outline-none"
+            className="w-9 border-transparent bg-white outline-none focus:outline-none"
           />
           <span className="font-bold">Niños</span>
         </label>
       </div>
 
-      <label
-        htmlFor="rooms"
-        className="flex items-center gap-3 rounded-b-3xl bg-white px-3 lg:rounded-r-3xl lg:rounded-bl-none"
+      <div className="flex items-center justify-center gap-3 rounded-b-2xl bg-white pl-1 pr-2 lg:rounded-none lg:rounded-r-3xl">
+        <span className="icon-[cbi--roomsother] h-7 w-7 bg-brand" />
+        <label htmlFor="rooms">
+          <input
+            type="number"
+            name="rooms"
+            max={30}
+            min={1}
+            defaultValue={1}
+            id="rooms"
+            className="content w-9 border-transparent bg-white outline-none focus:outline-none"
+          />
+          <span className="font-bold">Habitaciones</span>
+        </label>
+      </div>
+      <button
+        type="submit"
+        className="items-center justify-center self-center px-3 font-bold text-white hover:bg-brand-light"
       >
-        <span className="bg-brand icon-[cbi--roomsother] h-8 w-8" />
-        <input
-          type="number"
-          name="rooms"
-          max={30}
-          min={1}
-          defaultValue={1}
-          id="rooms"
-          className="h-full w-9 border-transparent bg-white outline-none focus:outline-none"
-        />
-        <span className="font-bold">Habitaciones</span>
-      </label>
-
+        Buscar
+      </button>
       <label htmlFor="description" className="absolute -bottom-32 h-28 w-full">
         <textarea
           type="text"
           name="description"
           id="description"
           placeholder='Ej: "Tengo veinti y tantos años, me gusta la playa, la comida de mar..."'
-          className="border-brand h-full w-full resize-none rounded-lg border-4 p-2 outline-none"
+          className="h-full w-full resize-none rounded-lg border-4 border-brand p-2"
         />
       </label>
-
-      <button
-        type="submit"
-        className="hover:bg-brand-light items-center justify-center self-center px-6 font-bold text-white"
-      >
-        Buscar
-      </button>
     </form>
   )
 }
