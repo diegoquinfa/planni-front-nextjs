@@ -1,3 +1,5 @@
+'use client'
+
 import {
   Select,
   SelectContent,
@@ -8,8 +10,23 @@ import {
 import DatePicker from '../date/DatePicker'
 
 const FormTrip = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault()
+
+    const formData = new FormData(e.target)
+
+    const description = formData.get('description')
+    const maxBudget = formData.get('maxBudget')
+
+    console.log('1 ->>', description)
+    console.log('2 ->>', maxBudget)
+  }
+
   return (
-    <form className="relative mx-auto mb-32 flex w-full flex-col gap-1 rounded-2xl border-4 border-brand bg-brand md:w-[80%] lg:w-fit lg:flex-row lg:rounded-3xl ">
+    <form
+      onSubmit={handleSubmit}
+      className="relative mx-auto mb-32 flex w-full flex-col gap-1 rounded-2xl border-4 border-brand bg-brand md:w-[80%] lg:w-fit lg:flex-row lg:rounded-3xl "
+    >
       <div className="flex items-center justify-center gap-3 rounded-t-2xl bg-white px-1 lg:rounded-none lg:rounded-l-3xl">
         <span className="icon-[solar--map-point-bold] h-7 w-7 bg-brand" />
         <label htmlFor="destiny">
@@ -37,44 +54,25 @@ const FormTrip = () => {
 
       <div className="flex items-center justify-center gap-3 bg-white px-1">
         <span className="icon-[material-symbols--person-2-rounded] h-7 w-7 bg-brand" />
-        <label htmlFor="adults">
+        <label htmlFor="maxBudget">
+          <span>$ </span>
           <input
             type="number"
-            name="adults"
-            max={30}
-            min={1}
-            defaultValue={1}
-            id="adults"
-            className="w-9 border-transparent bg-white outline-none focus:outline-none"
+            name="maxBudget"
+            max={99_999_999}
+            min={500_000}
+            defaultValue={500_000}
+            id="maxBudget"
+            className="w-28 border-transparent bg-white outline-none focus:outline-none"
           />
-          <span className="font-bold">Adultos</span>
-        </label>
-        <label htmlFor="kids">
-          <input
-            type="number"
-            name="kids"
-            max={30}
-            min={0}
-            defaultValue={0}
-            id="kids"
-            className="w-9 border-transparent bg-white outline-none focus:outline-none"
-          />
-          <span className="font-bold">Niños</span>
+          <span className="font-bold">Presupuesto</span>
         </label>
       </div>
 
       <div className="flex items-center justify-center gap-3 rounded-b-2xl bg-white pl-1 pr-2 lg:rounded-none lg:rounded-r-3xl">
         <span className="icon-[cbi--roomsother] h-7 w-7 bg-brand" />
         <label htmlFor="rooms">
-          <input
-            type="number"
-            name="rooms"
-            max={30}
-            min={1}
-            defaultValue={1}
-            id="rooms"
-            className="content w-9 border-transparent bg-white outline-none focus:outline-none"
-          />
+          <span>1 </span>
           <span className="font-bold">Habitaciones</span>
         </label>
       </div>

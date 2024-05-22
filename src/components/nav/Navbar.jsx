@@ -42,7 +42,6 @@ const Navbar = () => {
           <div className="flex w-full flex-col gap-2 px-1 lg:flex-row">
             <NavLink href="/">Inicio</NavLink>
             <NavLink href="/packages">Paquetes</NavLink>
-            <NavLink href="/">Nosotros</NavLink>
           </div>
           <NavUser />
         </div>
