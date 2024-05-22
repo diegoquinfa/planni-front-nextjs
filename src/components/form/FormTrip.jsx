@@ -17,9 +17,11 @@ const FormTrip = () => {
 
     const description = formData.get('description')
     const maxBudget = formData.get('maxBudget')
+    const destiny = formData.get('destiny')
 
     console.log('1 ->>', description)
     console.log('2 ->>', maxBudget)
+    console.log('3 ->>', destiny)
   }
 
   return (
@@ -32,13 +34,14 @@ const FormTrip = () => {
         <label htmlFor="destiny">
           <Select
             defaultValue="cartagena"
+            name="destiny"
             className="select-none border-0 border-none outline-none"
           >
             <SelectTrigger className="w-full rounded-none border-transparent px-0 font-bold outline-none selection:outline-none">
               <SelectValue placeholder="Destino" />
             </SelectTrigger>
             <SelectContent className="font-bold outline-none">
-              <SelectItem value="cartagena" className="font-bold">
+              <SelectItem value="Cartagena" className="font-bold">
                 Cartagena
               </SelectItem>
             </SelectContent>
