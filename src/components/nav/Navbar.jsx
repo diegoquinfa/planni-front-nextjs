@@ -16,7 +16,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`flex flex-col ${inNav} items-center bg-white px-7 py-4 max-lg:rounded-b-xl lg:flex-row lg:justify-between lg:gap-5`}
+      className={`flex flex-col ${inNav} container mx-auto items-center bg-white px-7 py-4 max-lg:rounded-b-xl lg:flex-row lg:justify-between lg:gap-5`}
     >
       <figure className="flex w-full items-center justify-between self-start lg:w-fit">
         <span
