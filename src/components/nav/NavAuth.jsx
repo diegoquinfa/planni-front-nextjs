@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export const NavAuth = () => {
   return (
     <div className="flex h-full w-full flex-col gap-2 p-1 lg:flex-row">

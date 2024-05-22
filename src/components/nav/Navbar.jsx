@@ -3,6 +3,7 @@ import { useState } from 'react'
 import NavLink from './NavLink'
 import NavUser from './NavUser'
 import Link from 'next/link'
+import { NavSession } from './NavSession'
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -44,7 +45,7 @@ const Navbar = () => {
             <NavLink href="/">Inicio</NavLink>
             <NavLink href="/packages">Paquetes</NavLink>
           </div>
-          <NavUser />
+          <NavSession />
         </div>
       </div>
     </nav>

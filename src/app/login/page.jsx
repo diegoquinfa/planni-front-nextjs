@@ -1,4 +1,34 @@
+'use client'
+
+import { signIn, useSession } from 'next-auth/react'
+import { useRouter } from 'next/navigation'
+
 const page = () => {
+  const session = useSession()
+  const router = useRouter()
+  console.log(session)
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+
+    const formData = new FormData(e.target)
+
+    const email = formData.get('email')
+    const password = formData.get('password')
+    console.log('email', email)
+    console.log('password', password)
+
+    const nextAuth = await signIn('credentials', {
+      email,
+      password,
+      redirect: false
+    })
+
+    if (nextAuth.error) return
+
+    router.push('/packages')
+  }
+
   return (
     <div className="mx-auto max-w-7xl ">
       <div className="flex h-screen flex-col items-center justify-center gap-5 md:flex-row md:gap-12">
@@ -10,7 +40,10 @@ const page = () => {
           />
         </a>
         <div className="flex h-full w-full justify-center rounded-t-3xl bg-white md:w-auto md:rounded-none">
-          <form className="flex w-[80%] flex-col items-center justify-center gap-7 p-4 md:w-[90%]">
+          <form
+            onSubmit={handleSubmit}
+            className="flex w-[80%] flex-col items-center justify-center gap-7 p-4 md:w-[90%]"
+          >
             <h2 className="w-fit justify-center text-3xl font-extrabold text-brand">
               Inicio de sesión
             </h2>
@@ -18,6 +51,7 @@ const page = () => {
               <p className="inline px-1 font-bold">Correo electronico</p>
               <input
                 id="email"
+                name="email"
                 type="email"
                 placeholder="Example@gmail.com"
                 className="w-full rounded-lg bg-[#f1f1f1] px-2 py-1 outline-none"
@@ -27,6 +61,7 @@ const page = () => {
               <p className=" inline px-1 font-bold">Contraseña</p>
               <input
                 id="password"
+                name="password"
                 type="password"
                 placeholder="*****"
                 className="w-full rounded-lg bg-[#f1f1f1] px-2 py-1 outline-none"

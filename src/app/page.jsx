@@ -4,8 +4,19 @@ import Container from '@/components/general/Container'
 import Banner from '@/components/general/Banner'
 import HomeCarousel from '@/components/home/HomeCarousel'
 import Navbar from '@/components/nav/Navbar'
+import { getPopularPackage } from '@/api/getPopularPackages'
 
-export default function Home() {
+const fetchPopulars = async () => {
+  const data = await getPopularPackage()
+  if (data.success === true) {
+    return data.data
+  }
+
+  return [1]
+}
+
+export default async function Home() {
+  const populars = await fetchPopulars()
   return (
     <>
       <header className="bg-white transition-all animate-out">
@@ -19,7 +30,7 @@ export default function Home() {
           </Banner>
           <FormTrip />
           <h2 className="w-fit text-2xl font-bold md:text-3xl">Recomendados</h2>
-          <HomeCarousel />
+          <HomeCarousel cards={populars} />
           <h2 className="w-fit text-2xl font-bold md:text-3xl">Destinos</h2>
           <figure className="relative">
             <img

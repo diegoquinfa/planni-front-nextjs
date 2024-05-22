@@ -8,9 +8,10 @@ import {
   SelectValue
 } from '@/components/ui/select'
 import DatePicker from '../date/DatePicker'
+import { login } from '@/api/login'
 
 const FormTrip = () => {
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
 
     const formData = new FormData(e.target)
@@ -22,6 +23,14 @@ const FormTrip = () => {
     console.log('1 ->>', description)
     console.log('2 ->>', maxBudget)
     console.log('3 ->>', destiny)
+    const data = await login({
+      email: 'test_@email.com',
+      password: '123'
+    })
+
+    console.log(await data)
+
+    console.log('hola:w   ')
   }
 
   return (

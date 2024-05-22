@@ -6,8 +6,9 @@ import {
   CarouselNext,
   CarouselPrevious
 } from '@/components/ui/carousel'
+import PropTypes from 'prop-types'
 
-const HomeCarousel = () => {
+const HomeCarousel = ({ cards }) => {
   return (
     <Carousel
       opts={{
@@ -16,32 +17,37 @@ const HomeCarousel = () => {
       className="m-auto h-fit w-[80%]  2xl:w-full"
     >
       <CarouselContent>
-        {Array.from({ length: 20 }).map((_, index) => (
+        {cards.map(({ hotel, attractions, totalCost, id }) => (
           <CarouselItem
-            key={index}
-            className="aspect-[9/13] max-h-96 max-w-96 py-2 sm:basis-1/2 md:basis-1/3 lg:basis-1/4"
+            key={id}
+            className="aspect-[9/13] max-h-96 max-w-96 py-2 transition-transform hover:scale-105 sm:basis-1/2 md:basis-1/3 lg:basis-1/4"
           >
             <div className="h-full rounded-lg shadow-md">
               <Card className="h-full overflow-hidden bg-white p-0">
                 <CardContent className="flex h-full flex-col p-0">
                   <figure className="relative h-[100%] w-full">
                     <img
-                      src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/458471254.jpg?k=c53df9a8986d8467d21586bb97b4b9a4cef57ea3f2f06e2f4838d295e9845d33&o=&hp=1"
+                      loading="lazy"
+                      src={hotel?.imageUrl}
                       alt="img"
                       className="h-[100%] w-full object-cover"
                     />
-                    <div className="absolute right-2 top-2 grid h-7 w-7 place-content-center rounded-sm bg-green-700">
-                      <p className="text-xs font-bold text-white">8.7</p>
-                    </div>
                   </figure>
                   <article className="flex h-fit w-full flex-col justify-between gap-1 p-2">
                     <div>
-                      <h2 className="font-bold text-gray-700">Hotel 1</h2>
+                      <h2 className="font-bold text-gray-700">
+                        Hotel: {hotel?.name ?? '1'}
+                      </h2>
                       <p className="text-xs font-bold text-gray-400">
-                        Cartagena de indias
+                        {attractions?.name ?? 'Cartagena de indias'}
                       </p>
                     </div>
-                    <p className="text-right text-sm font-bold">$ 1.899.999</p>
+                    <p className="text-right text-sm font-bold">
+                      {new Intl.NumberFormat('es-CO', {
+                        style: 'currency',
+                        currency: 'COP'
+                      }).format(Number(totalCost)) ?? '$ 1.899.999'}
+                    </p>
                   </article>
                 </CardContent>
               </Card>
@@ -53,6 +59,10 @@ const HomeCarousel = () => {
       <CarouselNext />
     </Carousel>
   )
+}
+
+HomeCarousel.propTypes = {
+  cards: PropTypes.array.isRequired
 }
 
 export default HomeCarousel
