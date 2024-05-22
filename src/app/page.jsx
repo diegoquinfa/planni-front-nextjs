@@ -8,7 +8,7 @@ import Navbar from '@/components/nav/Navbar'
 export default function Home() {
   return (
     <>
-      <header>
+      <header className="bg-white transition-all animate-out">
         <Navbar />
       </header>
       <main className="flex min-h-dvh flex-col items-center justify-start bg-gray-100 ">

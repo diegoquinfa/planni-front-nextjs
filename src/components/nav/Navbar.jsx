@@ -16,7 +16,8 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`flex flex-col ${inNav} container mx-auto items-center bg-white px-7 py-4 max-lg:rounded-b-xl lg:flex-row lg:justify-between lg:gap-5`}
+      className={`flex flex-col ${inNav} container mx-auto items-center bg-white px-7 py-4 
+      transition-all animate-out max-lg:rounded-b-xl lg:flex-row lg:justify-between lg:gap-5`}
     >
       <figure className="flex w-full items-center justify-between self-start lg:w-fit">
         <span
@@ -35,7 +36,7 @@ const Navbar = () => {
         </Link>
       </figure>
       <div
-        className={`${menu} flex w-full flex-col items-center gap-3 transition-all sm:w-[40%] md:w-[50%] lg:h-full lg:w-fit `}
+        className={`${menu} flex w-full flex-col items-center gap-3 transition-all animate-out sm:w-[40%] md:w-[50%] lg:h-full lg:w-fit`}
       >
         <img src="/logo.svg" alt="logo" className="h-14 w-14 lg:hidden" />
         <div className="flex w-full flex-col-reverse items-center justify-center gap-4 lg:flex-row">

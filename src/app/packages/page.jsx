@@ -6,7 +6,9 @@ import { PackageCard } from '@/components/packages/PackageCard'
 export default function Packages() {
   return (
     <Container>
-      <Banner src="/img/destino-cartagena.jpg">Cartagena</Banner>
+      <Banner reverse src="/img/destino-cartagena.jpg">
+        Cartagena
+      </Banner>
       <FormTrip />
       <h2 className="flex h-full w-full self-start text-4xl font-bold">
         Paquetes
