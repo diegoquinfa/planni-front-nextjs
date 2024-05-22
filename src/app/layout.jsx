@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es">
       <body
-        className={MPLUSRounded.className + ' ' + 'bg-[#D9D9D9] text-[#3e3e3e]'}
+        className={MPLUSRounded.className + ' ' + 'bg-gray-100 text-[#3e3e3e]'}
       >
         {children}
       </body>

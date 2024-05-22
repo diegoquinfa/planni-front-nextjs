@@ -11,7 +11,7 @@ export default function Home() {
       <header>
         <Navbar />
       </header>
-      <main className="flex min-h-dvh flex-col items-center justify-start bg-[#D9D9D9] ">
+      <main className="flex min-h-dvh flex-col items-center justify-start bg-gray-100 ">
         <Container>
           <Banner src="/img/cartagena.jpeg">
             Deja que creemos las <span className="text-brand">vacaciones</span>{' '}
