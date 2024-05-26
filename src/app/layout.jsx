@@ -1,6 +1,7 @@
 import localFont from 'next/font/local'
 import PropTypes from 'prop-types'
 import './globals.css'
+import SessionAuthProvider from '@/context/SessionAuthProvider'
 
 const MPLUSRounded = localFont({
   src: [
@@ -31,11 +32,15 @@ export default function RootLayout({ children }) {
   console.log(MPLUSRounded.className)
   return (
     <html lang="es">
-      <body
-        className={MPLUSRounded.className + ' ' + 'bg-[#D9D9D9] text-[#3e3e3e]'}
-      >
-        {children}
-      </body>
+      <SessionAuthProvider>
+        <body
+          className={
+            MPLUSRounded.className + ' ' + 'bg-gray-100 text-[#3e3e3e]'
+          }
+        >
+          {children}
+        </body>
+      </SessionAuthProvider>
     </html>
   )
 }
