@@ -74,7 +74,7 @@ const Page = () => {
           </h2>
           <div className="lg:flex-cols-2 flex flex-col gap-5 lg:flex-row">
             <div className="flex w-full flex-col gap-4 rounded-xl bg-white p-3 md:px-5 md:py-3 lg:w-[50%]">
-              <h2 className="text-center text-xl md:text-2xl font-bold">
+              <h2 className="text-center text-xl font-bold md:text-2xl">
                 Lorem, ipsum dolor sit amet consectetur adipisicing
               </h2>
               <div className="flex md:h-[300px] md:w-full">
@@ -102,7 +102,7 @@ const Page = () => {
               </p>
             </div>
             <div className="flex w-full flex-col gap-4 rounded-xl bg-white p-3 md:px-5 md:py-3 lg:w-[50%]">
-              <h2 className="text-center text-xl md:text-2xl font-bold">
+              <h2 className="text-center text-xl font-bold md:text-2xl">
                 Lorem, ipsum dolor sit amet consectetur adipisicing
               </h2>
               <div className="flex md:h-[300px] md:w-full">
