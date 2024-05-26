@@ -30,7 +30,7 @@ const Page = () => {
               voluptas at perspiciatis, laboriosam dolores?
             </p>
             <div className=" flex w-full items-center justify-center max-lg:rounded-xl max-lg:bg-white lg:w-[40%]">
-              <div className="flex flex-col items-center justify-center gap-3 py-6 lg:rounded-xl lg:bg-white lg:px-16 lg:py-20">
+              <div className="flex flex-col items-center justify-center gap-3 py-4 lg:rounded-xl lg:bg-white lg:px-16 lg:py-20">
                 <p className=" md:text-xl">Total de paquete</p>
                 <h2 className="w-full font-bold max-sm:text-2xl sm:text-4xl">
                   $ 1.320.000
@@ -42,7 +42,7 @@ const Page = () => {
             </div>
           </div>
         </div>
-        <div className="flex w-full flex-col gap-8 p-3 md:px-4 lg:w-[75%]">
+        <div className="flex w-full flex-col gap-5 p-3 md:px-4 lg:w-[75%]">
           <div className="flex items-center justify-between gap-3 rounded-xl bg-white p-2 max-lg:flex-col md:flex-row md:p-4 ">
             <div>
               <p className=" md:text-xl">Restaurante</p>
@@ -68,11 +68,11 @@ const Page = () => {
             perspiciatis, laboriosam dolores?
           </p>
         </div>
-        <div className="flex flex-col items-center gap-11 p-3 md:p-4 ">
+        <div className="flex flex-col items-center gap-8 p-3 md:p-4">
           <h2 className="w-full rounded-xl bg-white py-3 text-center text-xl font-bold sm:text-3xl md:px-4 md:py-2 lg:w-[70%]">
             Atracciones
           </h2>
-          <div className="lg:flex-cols-2 flex flex-col gap-4 lg:flex-row">
+          <div className="lg:flex-cols-2 flex flex-col gap-5 lg:flex-row">
             <div className="flex w-full flex-col gap-4 rounded-xl bg-white p-3 md:px-5 md:py-3 lg:w-[50%]">
               <h2 className="text-center text-xl md:text-2xl font-bold">
                 Lorem, ipsum dolor sit amet consectetur adipisicing
