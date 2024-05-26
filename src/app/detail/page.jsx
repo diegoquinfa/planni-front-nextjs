@@ -27,25 +27,33 @@ const page = () => {
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias
             similique in exercitationem qui eos placeat quae saepe deserunt
             necessitatibus illo officia ex ipsam natus asperiores voluptas at
-            perspiciatis, laboriosam dolores?
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias
-            similique in exercitationem qui eos placeat quae saepe deserunt
-            necessitatibus illo officia ex ipsam natus asperiores voluptas at
-            perspiciatis, laboriosam dolores?
+
+            perspiciatis, laboriosam dolores? Lorem, ipsum dolor sit amet
+            consectetur adipisicing elit. Alias similique in exercitationem qui
+            eos placeat quae saepe deserunt necessitatibus illo officia ex ipsam
+            natus asperiores voluptas at perspiciatis, laboriosam dolores?
+
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias
             similique in exercitationem qui eos placeat quae saepe deserunt
             necessitatibus illo officia ex ipsam natus asperiores voluptas at
             perspiciatis, laboriosam dolores?
           </p>
-          <div className="grid rounded-lg items-center bg-white p-4 gap-2">
-            <p className="font-bold text-xl">KAYAK</p>
+          <div className="grid items-center gap-2 rounded-lg bg-white p-4">
+            <p className="text-xl font-bold">KAYAK</p>
             <h2 className="text-4xl font-bold">$ 1.320.000</h2>
-            <p className="font-bold text-xl">incluye</p>
+            <p className="text-xl font-bold">incluye</p>
             <div className="flex items-center gap-2">
-              <p className="bg-teal-700 rounded-full text-white px-3">Vuelos</p>
-              <p className="bg-teal-700 rounded-full text-white px-3">Transporte al hotel</p>
-              <p className="bg-teal-700 rounded-full text-white px-3">Estadía</p>
-              <p className="bg-teal-700 rounded-full text-white px-3">Piscina</p>
+              <p className="rounded-full bg-teal-700 px-3 text-white">Vuelos</p>
+              <p className="rounded-full bg-teal-700 px-3 text-white">
+                Transporte al hotel
+              </p>
+              <p className="rounded-full bg-teal-700 px-3 text-white">
+                Estadía
+              </p>
+              <p className="rounded-full bg-teal-700 px-3 text-white">
+                Piscina
+              </p>
+
             </div>
             <div className="flex flex-row gap-3">
               <p>corazon</p>
