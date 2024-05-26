@@ -1,22 +1,105 @@
-import Link from 'next/link'
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger
+} from '@/components/ui/dropdown-menu'
 
-const NavUser = () => {
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger
+} from '@/components/ui/dialog'
+
+import Link from 'next/link'
+import { useRouter } from 'next/navigation'
+
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+import { signOut } from 'next-auth/react'
+
+export const NavUser = () => {
+  const router = useRouter()
   return (
-    <div className="flex h-full w-full flex-col gap-2 p-1 lg:flex-row">
-      <Link
-        href="/register"
-        className="w-full rounded-3xl border-2 border-brand p-2 text-center text-brand transition-all duration-300 ease-in-out hover:scale-105 hover:bg-brand-light lg:w-[120px]"
-      >
-        Crear cuenta
-      </Link>
-      <Link
-        href="/login"
-        className="w-full rounded-3xl border-2 border-brand bg-brand p-2 text-center text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-brand-light hover:text-brand lg:w-[120px]"
-      >
-        Iniciar sesión
-      </Link>
-    </div>
+    <>
+      <div className="mb-4 flex h-full w-full flex-col gap-2 p-1 lg:hidden lg:flex-row">
+        <Link
+          href="/profile"
+          className="w-full rounded-3xl border-2 border-brand px-8 py-2 text-center text-brand 
+                  transition-all duration-300 ease-in-out hover:scale-105 hover:bg-brand-light lg:w-max"
+        >
+          Perfil
+        </Link>
+        <Link
+          href="/favorites"
+          className="w-full rounded-3xl border-2 border-brand px-8 py-2 text-center text-brand 
+                  transition-all duration-300 ease-in-out hover:scale-105 hover:bg-brand-light lg:w-max"
+        >
+          Favoritos
+        </Link>
+        <Dialog>
+          <DialogTrigger>
+            <button
+              className="w-full rounded-3xl border-2 border-brand bg-brand px-8 py-2 text-center text-white 
+                  transition-all duration-300 ease-in-out hover:scale-105 lg:w-max"
+            >
+              Cerrar sesión
+            </button>
+          </DialogTrigger>
+          <DialogContent>
+            <DialogHeader>
+              <DialogTitle>¿Deseas cerrar sesión?</DialogTitle>
+              <DialogDescription>
+                Al cerrar sesión, serás desconectado de tu cuenta y necesitarás
+                volver a ingresar tus credenciales para acceder nuevamente.
+              </DialogDescription>
+            </DialogHeader>
+            <DialogFooter>
+              <button
+                onClick={() => {
+                  signOut()
+                  router.push('/')
+                }}
+                className="mt-2 w-full rounded-3xl border-2 border-brand bg-brand px-8 py-2 text-center 
+                  font-bold text-white transition-all duration-300 ease-in-out hover:scale-105 lg:w-max"
+              >
+                Confirmar
+              </button>
+            </DialogFooter>
+          </DialogContent>
+        </Dialog>
+      </div>
+
+      <div className="hidden lg:block">
+        <DropdownMenu>
+          <DropdownMenuTrigger className="ring-none rounded-full">
+            <Avatar>
+              <AvatarImage src="https://github.com/shadcn.png" />
+              <AvatarFallback>CN</AvatarFallback>
+            </Avatar>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent>
+            <DropdownMenuLabel>Mi cuenta</DropdownMenuLabel>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem>Perfil</DropdownMenuItem>
+            <DropdownMenuItem>Favoritos</DropdownMenuItem>
+            <DropdownMenuItem>
+              <button
+                onClick={() => signOut()}
+                className="mt-2 w-full rounded-3xl border-2 border-brand bg-brand px-8 py-2 text-center 
+                  font-bold text-white transition-all duration-300 ease-in-out hover:scale-105 lg:w-max"
+              >
+                Cerrar sesión
+              </button>
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
+      </div>
+    </>
   )
 }
-
-export default NavUser
