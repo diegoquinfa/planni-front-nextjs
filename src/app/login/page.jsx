@@ -14,7 +14,7 @@ const page = () => {
             <h2 className="w-fit justify-center text-3xl font-extrabold text-brand">
               Inicio de sesión
             </h2>
-            <div className="w-full ">
+            <div className="w-full">
               <p className="inline px-1 font-bold">Correo electronico</p>
               <input
                 id="email"
@@ -24,7 +24,7 @@ const page = () => {
               />
             </div>
             <div className="w-full">
-              <p className=" inline px-1 font-bold">Contraseña</p>
+              <p className="inline px-1 font-bold">Contraseña</p>
               <input
                 id="password"
                 type="password"
@@ -32,7 +32,7 @@ const page = () => {
                 className="w-full rounded-lg bg-[#f1f1f1] px-2 py-1 outline-none"
               />
             </div>
-            <button className=" rounded-lg bg-[#D9D9D9] px-6 py-1 font-extrabold hover:bg-neutral-400">
+            <button className="rounded-lg bg-[#D9D9D9] px-6 py-1 font-extrabold hover:bg-neutral-400">
               Continua con Google
             </button>
             <p>
