@@ -44,6 +44,7 @@ const FormTrip = () => {
           <Select
             defaultValue="cartagena"
             name="destiny"
+            value="Cartagena"
             className="select-none border-0 border-none outline-none"
           >
             <SelectTrigger className="w-full rounded-none border-transparent px-0 font-bold outline-none selection:outline-none">
