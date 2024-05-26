@@ -88,13 +88,7 @@ const FormTrip = () => {
           <span className="font-bold">Habitaciones</span>
         </label>
       </div>
-      <button
-        type="submit"
-        className="items-center justify-center self-center px-3 font-bold text-white hover:bg-brand-light"
-      >
-        Buscar
-      </button>
-      <label htmlFor="description" className="absolute -bottom-32 h-28 w-full">
+      <label htmlFor="description" className="h-28 w-full">
         <textarea
           type="text"
           name="description"
