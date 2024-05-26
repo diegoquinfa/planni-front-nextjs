@@ -24,7 +24,7 @@ const Footer = () => {
                   />
                   <button
                     type="submit"
-                    className="rounded-3xl bg-green-700 px-6 py-1 text-white hover:bg-teal-900"
+                    className="rounded-3xl bg-green-700 px-6 py-1 text-white hover:bg-teal-900 duration-300"
                   >
                     SUSCRIBETE
                   </button>

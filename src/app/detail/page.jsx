@@ -27,10 +27,12 @@ const page = () => {
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias
             similique in exercitationem qui eos placeat quae saepe deserunt
             necessitatibus illo officia ex ipsam natus asperiores voluptas at
+
             perspiciatis, laboriosam dolores? Lorem, ipsum dolor sit amet
             consectetur adipisicing elit. Alias similique in exercitationem qui
             eos placeat quae saepe deserunt necessitatibus illo officia ex ipsam
             natus asperiores voluptas at perspiciatis, laboriosam dolores?
+
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias
             similique in exercitationem qui eos placeat quae saepe deserunt
             necessitatibus illo officia ex ipsam natus asperiores voluptas at
@@ -51,6 +53,7 @@ const page = () => {
               <p className="rounded-full bg-teal-700 px-3 text-white">
                 Piscina
               </p>
+
             </div>
             <div className="flex flex-row gap-3">
               <p>corazon</p>

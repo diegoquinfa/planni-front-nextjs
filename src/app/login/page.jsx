@@ -62,7 +62,9 @@ const Page = () => {
             <h2 className="w-fit justify-center text-3xl font-extrabold text-brand">
               Inicio de sesión
             </h2>
+
             <div className="flex w-full flex-col gap-2">
+
               <p className="inline px-1 font-bold">Correo electronico</p>
               <input
                 id="email"
@@ -72,7 +74,9 @@ const Page = () => {
                 className={`w-full rounded-lg bg-[#f1f1f1] px-2 py-1 outline-none ${error ? 'outline-red-400' : ''}`}
               />
             </div>
+
             <div className="flex w-full flex-col gap-2">
+
               <p className="inline px-1 font-bold">Contraseña</p>
               <input
                 id="password"
