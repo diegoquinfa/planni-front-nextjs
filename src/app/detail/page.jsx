@@ -15,7 +15,7 @@ const Page = () => {
               alt="destino"
             />
           </div>
-          <div className="flex w-full flex-col-reverse gap-3 md:p-4 lg:flex-row ">
+          <div className="flex w-full flex-col-reverse justify-between gap-3 md:p-4 lg:flex-row ">
             <p className="sm:text-xl lg:w-[60%]">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias
               similique in exercitationem qui eos placeat quae saepe deserunt
@@ -29,7 +29,7 @@ const Page = () => {
               deserunt necessitatibus illo officia ex ipsam natus asperiores
               voluptas at perspiciatis, laboriosam dolores?
             </p>
-            <div className=" flex w-full items-center justify-center max-lg:rounded-xl max-lg:bg-white lg:w-[40%]">
+            <div className=" flex w-full items-center justify-center max-lg:rounded-xl max-lg:bg-white lg:w-[40%] lg:justify-end">
               <div className="flex flex-col items-center justify-center gap-3 py-4 lg:rounded-xl lg:bg-white lg:px-16 lg:py-20">
                 <p className=" md:text-xl">Total de paquete</p>
                 <h2 className="w-full font-bold max-sm:text-2xl sm:text-4xl">
@@ -43,9 +43,11 @@ const Page = () => {
           </div>
         </div>
         <div className="flex w-full flex-col gap-5 p-3 md:px-4 lg:w-[75%]">
-          <div className="flex items-center justify-between gap-3 rounded-xl bg-white p-2 max-lg:flex-col md:flex-row md:p-4 ">
+          <div className="flex items-center justify-between gap-3 rounded-xl bg-white p-2 max-lg:flex-col md:p-4 lg:flex-row ">
             <div>
-              <p className=" md:text-xl">Restaurante</p>
+              <p className="font-bold text-neutral-600 md:text-xl">
+                Restaurante
+              </p>
               <h2 className="text-xl font-bold sm:text-2xl">
                 Nombre del restaurante
               </h2>

@@ -87,8 +87,8 @@ const FormTrip = () => {
             type="number"
             name="maxBudget"
             max={99_999_999}
-            min={500_000}
-            defaultValue={500_000}
+            min={2_000_000}
+            defaultValue={2_000_000}
             id="maxBudget"
             className="w-28 border-transparent bg-white outline-none focus:outline-none"
           />
