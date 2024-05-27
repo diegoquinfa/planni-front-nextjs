@@ -20,6 +20,7 @@ const FormTrip = () => {
 
     setLoading(true)
     setPackages([])
+    console.log('Buscando datos')
 
     const formData = new FormData(e.target)
 
@@ -41,6 +42,7 @@ const FormTrip = () => {
 
     const packs = await res.json()
     console.log(packs)
+
 
     setLoading(false)
     setPackages(packs.data)

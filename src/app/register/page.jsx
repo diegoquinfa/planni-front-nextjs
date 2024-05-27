@@ -1,14 +1,16 @@
+import Link from 'next/link'
+
 const page = () => {
   return (
     <div className="mx-auto max-w-7xl">
       <div className="flex h-screen flex-col items-center justify-center gap-5 md:flex-row-reverse md:gap-12">
-        <a href="/">
+        <Link href="/">
           <img
             src="logo.svg"
             alt="logo"
-            className="m-4 h-[210px] md:h-[300px] lg:h-[400px] xl:h-[500px]"
+            className="m-4 h-[210px] drop-shadow-lg md:h-[300px] lg:h-[400px] xl:h-[500px]"
           />
-        </a>
+        </Link>
         <div className="flex h-full w-full justify-center rounded-t-3xl bg-white md:w-auto md:rounded-none">
           <form className="flex w-[80%] flex-col items-center justify-center gap-7 p-4 md:w-[90%]">
             <h2 className="w-fit justify-center text-3xl font-extrabold text-brand">
@@ -46,9 +48,9 @@ const page = () => {
             </button>
             <p>
               ¿Ya tienes cuenta? -{' '}
-              <a href="/login" className="text-brand hover:underline">
+              <Link href="/login" className="text-brand hover:underline">
                 Inicia sesión
-              </a>
+              </Link>
             </p>
             <button
               type="submit"

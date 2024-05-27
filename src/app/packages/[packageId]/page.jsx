@@ -6,15 +6,12 @@ const getDetails = async (packId) => {
   const pack = await getPackageDetails(packId)
 
   if (!pack.success) return
-  console.log('aaaaaaa')
-
   return pack
 }
 
 const PackageId = async ({ params }) => {
   const res = await getDetails(params.packageId)
-  console.log(res)
-  if (!res?.success) redirect('/packages')
+  if (!res?.success) redirect('/not-found')
 
   const packageDetail = res.data
 
