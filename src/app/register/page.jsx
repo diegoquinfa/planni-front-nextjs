@@ -1,4 +1,4 @@
-const page = () => {
+const Page = () => {
   return (
     <div className="mx-auto max-w-7xl">
       <div className="flex h-screen flex-col items-center justify-center gap-5 md:flex-row-reverse md:gap-12">
@@ -63,4 +63,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

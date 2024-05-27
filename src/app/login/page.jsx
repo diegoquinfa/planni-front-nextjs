@@ -45,7 +45,7 @@ const Page = () => {
   }
 
   return (
-    <div className="mx-auto max-w-7xl ">
+    <div className="mx-auto max-w-7xl">
       <div className="flex h-screen flex-col items-center justify-center gap-5 md:flex-row md:gap-12">
         <a href="/">
           <img
