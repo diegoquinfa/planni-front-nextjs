@@ -1,7 +1,6 @@
 import Container from '@/components/general/Container'
 import Banner from '@/components/general/Banner'
 import FormTrip from '@/components/form/FormTrip'
-import { PackageCard } from '@/components/packages/PackageCard'
 import { PackageContainer } from '@/components/packages/PackageContainer'
 
 export default function Packages() {
