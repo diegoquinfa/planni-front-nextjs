@@ -7,12 +7,20 @@ import {
   SelectTrigger,
   SelectValue
 } from '@/components/ui/select'
-import DatePicker from '../date/DatePicker'
-import { login } from '@/api/login'
+import DatePicker from '@/components/date/DatePicker'
+import { usePackageStore } from '@/store/usePackageStore'
 
 const FormTrip = () => {
+  const setLoading = usePackageStore((state) => state.setLoading)
+  const packages = usePackageStore((state) => state.packages)
+  const setPackages = usePackageStore((state) => state.setPackages)
+
   const handleSubmit = async (e) => {
     e.preventDefault()
+
+    setLoading(true)
+    setPackages([])
+    console.log('Buscando datos')
 
     const formData = new FormData(e.target)
 
@@ -20,17 +28,26 @@ const FormTrip = () => {
     const maxBudget = formData.get('maxBudget')
     const destiny = formData.get('destiny')
 
-    console.log('1 ->>', description)
-    console.log('2 ->>', maxBudget)
-    console.log('3 ->>', destiny)
-    const data = await login({
-      email: 'test_@email.com',
-      password: '123'
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/package`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        cityNames: destiny,
+        contextUser: description,
+        maxBudget
+      })
     })
 
-    console.log(await data)
+    const packs = await res.json()
+    console.log(packs)
 
-    console.log('hola:w   ')
+
+    setLoading(false)
+    setPackages(packs.data)
+
+    console.log('->', packages)
   }
 
   return (
@@ -42,9 +59,8 @@ const FormTrip = () => {
         <span className="icon-[solar--map-point-bold] h-7 w-7 bg-brand" />
         <label htmlFor="destiny">
           <Select
-            defaultValue="cartagena"
+            defaultValue="Cartagena"
             name="destiny"
-            value="Cartagena"
             className="select-none border-0 border-none outline-none"
           >
             <SelectTrigger className="w-full rounded-none border-transparent px-0 font-bold outline-none selection:outline-none">
@@ -73,8 +89,8 @@ const FormTrip = () => {
             type="number"
             name="maxBudget"
             max={99_999_999}
-            min={500_000}
-            defaultValue={500_000}
+            min={2_000_000}
+            defaultValue={2_000_000}
             id="maxBudget"
             className="w-28 border-transparent bg-white outline-none focus:outline-none"
           />
@@ -89,7 +105,13 @@ const FormTrip = () => {
           <span className="font-bold">Habitaciones</span>
         </label>
       </div>
-      <label htmlFor="description" className="h-28 w-full">
+      <button
+        type="submit"
+        className="items-center justify-center self-center px-3 font-bold text-white hover:bg-brand-light"
+      >
+        Buscar
+      </button>
+      <label htmlFor="description" className="absolute -bottom-32 h-28 w-full">
         <textarea
           type="text"
           name="description"

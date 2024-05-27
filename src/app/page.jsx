@@ -7,16 +7,18 @@ import Navbar from '@/components/nav/Navbar'
 import { getPopularPackage } from '@/api/getPopularPackages'
 
 const fetchPopulars = async () => {
-  const data = await getPopularPackage()
-  if (data.success === true) {
-    return data.data
+  const res = await getPopularPackage()
+  if (res.success === true) {
+    console.log('fetch ->', res.data[0])
+    return res.data
   }
 
-  return [1]
+  return []
 }
 
 export default async function Home() {
   const populars = await fetchPopulars()
+  console.log('componente ->', populars[0])
   return (
     <>
       <header className="bg-white transition-all animate-out">

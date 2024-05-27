@@ -3,6 +3,7 @@
 import { signIn, useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
+import Link from 'next/link'
 
 const Page = () => {
   const session = useSession()
@@ -26,8 +27,6 @@ const Page = () => {
 
       return
     }
-    console.log('email', email)
-    console.log('password', password)
 
     const nextAuth = await signIn('credentials', {
       email,
@@ -47,13 +46,13 @@ const Page = () => {
   return (
     <div className="mx-auto max-w-7xl ">
       <div className="flex h-screen flex-col items-center justify-center gap-5 md:flex-row md:gap-12">
-        <a href="/">
+        <Link href="/">
           <img
             src="logo.svg"
             alt="logo"
-            className="m-4 h-[210px] md:h-[300px] lg:h-[400px] xl:h-[500px]"
+            className="m-4 h-[210px] drop-shadow-lg md:h-[300px] lg:h-[400px] xl:h-[500px]"
           />
-        </a>
+        </Link>
         <div className="flex h-full w-full justify-center rounded-t-3xl bg-white md:w-auto md:rounded-none">
           <form
             onSubmit={handleSubmit}
@@ -64,7 +63,6 @@ const Page = () => {
             </h2>
 
             <div className="flex w-full flex-col gap-2">
-
               <p className="inline px-1 font-bold">Correo electronico</p>
               <input
                 id="email"
@@ -76,7 +74,6 @@ const Page = () => {
             </div>
 
             <div className="flex w-full flex-col gap-2">
-
               <p className="inline px-1 font-bold">Contraseña</p>
               <input
                 id="password"
@@ -91,9 +88,9 @@ const Page = () => {
             </button>
             <p>
               ¿Todavía no tienes cuenta? -{' '}
-              <a href="/register" className="text-brand hover:underline">
+              <Link href="/register" className="text-brand hover:underline">
                 Registrate
-              </a>
+              </Link>
             </p>
             <button
               disabled={loading}
