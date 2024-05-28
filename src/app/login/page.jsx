@@ -83,9 +83,9 @@ const Page = () => {
                 className={`w-full rounded-lg bg-[#f1f1f1] px-2 py-1 outline-none  ${error ? 'outline-red-400' : ''}`}
               />
             </div>
-            <button className=" rounded-lg bg-[#D9D9D9] px-6 py-1 font-extrabold hover:bg-neutral-400 ">
-              Continua con Google
-            </button>
+            {/* <button className=" rounded-lg bg-[#D9D9D9] px-6 py-1 font-extrabold hover:bg-neutral-400 "> */}
+            {/*   Continua con Google */}
+            {/* </button> */}
             <p>
               ¿Todavía no tienes cuenta? -{' '}
               <Link href="/register" className="text-brand hover:underline">

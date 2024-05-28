@@ -1,6 +1,7 @@
 import { getPackageDetails } from '@/api/getPackageDetails'
 import Container from '@/components/general/Container'
 import { redirect } from 'next/navigation'
+import Link from 'next/link'
 
 const getDetails = async (packId) => {
   const pack = await getPackageDetails(packId)
@@ -55,9 +56,12 @@ const PackageId = async ({ params }) => {
                     currency: 'COP'
                   }).format(packageDetail.totalCost)}
                 </h2>
-                <button className="rounded-3xl bg-brand px-7 py-2 text-white duration-300 hover:bg-brand-light hover:bg-red-900">
+                <Link
+                  href={`/pay/${packageDetail.id}`}
+                  className="rounded-3xl bg-brand px-7 py-2 text-white duration-300 hover:bg-brand-light hover:bg-red-900"
+                >
                   Reservar
-                </button>
+                </Link>
               </div>
             </div>
           </div>

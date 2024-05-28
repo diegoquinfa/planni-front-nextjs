@@ -11,9 +11,7 @@ export const getPackageDetails = async (packageId) => {
       `${process.env.NEXT_PUBLIC_BACKEND_URL}/package/${packageId}`
     )
 
-    console.log('Hola mundi')
     if (!res.ok) {
-      console.log('Entre aca', res.status)
       return {
         success: false,
         message: 'Fallo la petición',
@@ -22,7 +20,6 @@ export const getPackageDetails = async (packageId) => {
     }
 
     const details = await res.json()
-    console.log('mojon', details)
 
     return {
       success: true,
@@ -30,7 +27,6 @@ export const getPackageDetails = async (packageId) => {
       data: details.data
     }
   } catch (e) {
-    console.log(e)
     return {
       success: false,
       message: 'Ocurrio un error',
