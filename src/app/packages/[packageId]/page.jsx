@@ -9,6 +9,19 @@ const getDetails = async (packId) => {
   return pack
 }
 
+const updateResolution = (imgSrc) => {
+  const url = new URL(imgSrc)
+
+  const fullResolution = new URL('https://dynamic-media-cdn.tripadvisor.com/')
+  fullResolution.pathname = url.pathname
+
+  fullResolution.searchParams.append('w', '1200')
+  fullResolution.searchParams.append('h', '-1')
+  fullResolution.searchParams.append('s', '1')
+
+  return fullResolution.toString()
+}
+
 const PackageId = async ({ params }) => {
   const res = await getDetails(params.packageId)
   if (!res?.success) redirect('/not-found')
@@ -25,7 +38,7 @@ const PackageId = async ({ params }) => {
           <div className="flex md:h-[540px] md:w-full">
             <img
               className="h-auto w-full rounded-xl object-cover max-sm:rounded-lg"
-              src={packageDetail.hotel.imageUrl}
+              src={updateResolution(packageDetail.hotel.imageUrl)}
               alt="destino"
             />
           </div>
