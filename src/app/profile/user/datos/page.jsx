@@ -1,7 +1,7 @@
 const Page = () => {
   return (
-    <div className="iteams-around grid h-full grid-cols-2 gap-4">
-      <div className="p-4">
+    <div className="flex flex-col md:grid md:grid-cols-2 gap-4 p-3">
+      <div className="p-3">
         <h2 className="text-xl font-bold">Nombre de usuario</h2>
         <input
           type="text"
@@ -12,7 +12,7 @@ const Page = () => {
           className="h-10 w-full border-b-2 border-[#ababab] p-2 outline-none"
         />
       </div>
-      <div className="p-4">
+      <div className="p-3">
         <h2 className="text-xl font-bold">Nombre</h2>
         <input
           type="text"
@@ -23,7 +23,7 @@ const Page = () => {
           className="h-10 w-full border-b-2 border-[#ababab] p-2 outline-none"
         />
       </div>
-      <div className="p-4">
+      <div className="p-3">
         <h2 className="text-xl font-bold">Apellido</h2>
         <input
           type="text"
@@ -34,7 +34,7 @@ const Page = () => {
           className="h-10 w-full border-b-2 border-[#ababab] p-2 outline-none"
         />
       </div>
-      <div className="p-4">
+      <div className="p-3">
         <h2 className="text-xl font-bold">Correo</h2>
         <input
           type="email"
@@ -45,7 +45,7 @@ const Page = () => {
           className="h-10 w-full border-b-2 border-[#ababab] p-2 outline-none"
         />
       </div>
-      <div className="p-4">
+      <div className="p-3">
         <h2 className="text-xl font-bold">Contraseña</h2>
         <input
           type="password"
@@ -56,7 +56,7 @@ const Page = () => {
           className="h-10 w-full border-b-2 border-[#ababab] p-2 outline-none"
         />
       </div>
-      <div className="p-4">
+      <div className="p-3">
         <h2 className="text-xl font-bold">Telefono</h2>
         <input
           type="number"
@@ -67,7 +67,7 @@ const Page = () => {
           className="h-10 w-full border-b-2 border-[#ababab] p-2 outline-none"
         />
       </div>
-      <div className="col-span-2 p-4">
+      <div className="col-span-2 p-3">
         <h2 className="text-xl font-bold">Dirección</h2>
         <input
           type="text"
