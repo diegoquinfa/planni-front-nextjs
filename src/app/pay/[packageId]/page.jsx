@@ -5,8 +5,7 @@ const Page = () => {
     <section className="container mx-auto min-h-[calc(100dvh_-_298px)] py-8">
       <h1 className="mb-4 text-2xl font-bold">Reservar paquete</h1>
       <div className="flex min-h-[58dvh] w-full flex-col gap-4 lg:flex-row">
-        {/* <div className="h-full w-full rounded-lg border p-4"> */}
-        <div className="flex h-fit w-full flex-col overflow-hidden rounded-lg bg-white md:flex-row">
+        <div className="flex h-fit w-full flex-col overflow-hidden rounded-lg border bg-white md:flex-row">
           <figure className="w-full lg:w-1/3">
             <img
               className="aspect-[12/10] w-full object-cover md:h-full"
@@ -39,8 +38,6 @@ const Page = () => {
             </div>
           </div>
         </div>
-        {/* </div> */}
-        {/**/}
         <form className="border-gray-30 flex min-w-max flex-col content-between gap-4 rounded-lg border bg-white p-6">
           <div className="flex flex-col gap-4">
             <h2 className="text-lg font-bold">Payment method</h2>

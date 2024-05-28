@@ -2,13 +2,27 @@
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
   DialogHeader,
   DialogTitle,
   DialogTrigger
 } from '@/components/ui/dialog'
+import { useSession } from 'next-auth/react'
+import { useState } from 'react'
 
 export const ConfirmationDialog = () => {
+  const [isLoading, setIsLoading] = useState(false)
+  const session = useSession()
+  console.log(session)
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    setIsLoading(true)
+
+    const res = await
+
+      setIsLoading(false)
+  }
+
   return (
     <Dialog>
       <DialogTrigger className="w-full rounded-lg bg-brand py-2 text-white">
@@ -16,11 +30,10 @@ export const ConfirmationDialog = () => {
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>Are you absolutely sure?</DialogTitle>
-          <DialogDescription>
-            This action cannot be undone. This will permanently delete your
-            account and remove your data from our servers.
-          </DialogDescription>
+          <DialogTitle>¿Seguro desea realizar la compra??</DialogTitle>
+          <form onSubmit={handleSubmit}>
+            <button disabled={isLoading}>Hacer compra</button>
+          </form>
         </DialogHeader>
       </DialogContent>
     </Dialog>
