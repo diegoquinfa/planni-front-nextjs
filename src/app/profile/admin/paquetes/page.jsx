@@ -33,87 +33,153 @@ const Page = () => {
               Editar
             </AlertDialogTrigger>
             <AlertDialogContent className="p-10">
-              <AlertDialogHeader>
-                <AlertDialogDescription>
-                  <div className="flex flex-col gap-4 p-3 md:grid md:grid-cols-2">
-                    <div className="p-3">
-                      <h2 className="text-xl font-bold">Nombre de usuario</h2>
-                      <input
-                        type="text"
-                        name="Nombre de usuario"
-                        id="Nombre de usuario"
-                        readOnly=""
-                        value="Jose_45"
-                        className="h-10 w-full border-b-2 border-[#ababab] p-2 outline-none"
-                      />
+              <AlertDialogHeader className="flex">
+                <AlertDialogDescription className="flex">
+                  <form action="" className="flex flex-row gap-10">
+                    <div className="flex flex-col gap-8">
+                      <h2 className="text-center text-2xl font-bold">Hotel</h2>
+                      <div>
+                        <h2 className="text-xl font-bold">Titulo de hotel</h2>
+                        <input
+                          type="text"
+                          name="titulo"
+                          id="titulo"
+                          placeholder="Hotel..."
+                          className="h-10 w-full border-b-2 border-b-gray-900 p-2 outline-none"
+                        />
+                      </div>
+                      <div>
+                        <h2 className="text-xl font-bold">Precio</h2>
+                        <input
+                          type="number"
+                          name="precio"
+                          id="precios"
+                          placeholder="100.000"
+                          className="h-10 w-full border-b-2 border-b-gray-900 p-2 outline-none"
+                        />
+                      </div>
+                      <div>
+                        <h2 className="text-xl font-bold">Descripción</h2>
+                        <textarea
+                          name="Descirpcion"
+                          id="Descirpcion"
+                          className="h-28 w-full rounded-lg border-2 border-slate-400"
+                        />
+                      </div>
+                      <div>
+                        <h2 className="text-xl font-bold">Imagen</h2>
+                        <input
+                          type="text"
+                          name="titulo"
+                          id="titulo"
+                          placeholder="Hotel..."
+                          className="h-10 w-full border-b-2 border-b-gray-900 p-2 outline-none"
+                        />
+                      </div>
                     </div>
-                    <div className="p-3">
-                      <h2 className="text-xl font-bold">Nombre</h2>
-                      <input
-                        type="text"
-                        name="Nombre"
-                        id="Nombre"
-                        readOnly=""
-                        value="Jose"
-                        className="h-10 w-full border-b-2 border-[#ababab] p-2 outline-none"
-                      />
+                    <div className="flex flex-col gap-8">
+                      <h2 className="text-center text-2xl font-bold">
+                        Restaurante
+                      </h2>
+                      <div>
+                        <h2 className="text-xl font-bold">
+                          Titulo de restaurante
+                        </h2>
+                        <input
+                          type="text"
+                          name="titulo"
+                          id="titulo"
+                          placeholder="Hotel..."
+                          className="h-10 w-full border-b-2 border-b-gray-900 p-2 outline-none"
+                        />
+                      </div>
+                      <div>
+                        <h2 className="text-xl font-bold">Precio</h2>
+                        <input
+                          type="number"
+                          name="precio"
+                          id="precios"
+                          placeholder="100.000"
+                          className="h-10 w-full border-b-2 border-b-gray-900 p-2 outline-none"
+                        />
+                      </div>
+                      <div>
+                        <h2 className="text-xl font-bold">Descripción</h2>
+                        <textarea
+                          name="Descirpcion"
+                          id="Descirpcion"
+                          className="h-28 w-full rounded-lg border-2 border-slate-400"
+                        />
+                      </div>
                     </div>
-                    <div className="p-3">
-                      <h2 className="text-xl font-bold">Apellido</h2>
-                      <input
-                        type="text"
-                        name="Apellido"
-                        id="Apellido"
-                        readOnly=""
-                        value="Castillo Pérez"
-                        className="h-10 w-full border-b-2 border-[#ababab] p-2 outline-none"
-                      />
+                    <div className="flex flex-col gap-8">
+                      <h2 className="text-center text-2xl font-bold">
+                        Atracciones
+                      </h2>
+                      <div className="flex flex-row gap-8">
+                        <div className="flex flex-col gap-8">
+                          <div>
+                            <h2 className="text-xl font-bold">Titulo</h2>
+                            <input
+                              type="text"
+                              name="titulo"
+                              id="titulo"
+                              placeholder="Hotel..."
+                              className="h-10 w-full border-b-2 border-b-gray-900 p-2 outline-none"
+                            />
+                          </div>
+                          <div>
+                            <h2 className="text-xl font-bold">Precio</h2>
+                            <input
+                              type="number"
+                              name="precio"
+                              id="precios"
+                              placeholder="100.000"
+                              className="h-10 w-full border-b-2 border-b-gray-900 p-2 outline-none"
+                            />
+                          </div>
+                          <div>
+                            <h2 className="text-xl font-bold">Descripción</h2>
+                            <textarea
+                              name="Descirpcion"
+                              id="Descirpcion"
+                              className="h-28 w-full rounded-lg border-2 border-slate-400"
+                            />
+                          </div>
+                        </div>
+                        <div className="flex flex-col gap-8">
+                          <div>
+                            <h2 className="text-xl font-bold">Titulo</h2>
+                            <input
+                              type="text"
+                              name="titulo"
+                              id="titulo"
+                              placeholder="Hotel..."
+                              className="h-10 w-full border-b-2 border-b-gray-900 p-2 outline-none"
+                            />
+                          </div>
+                          <div>
+                            <h2 className="text-xl font-bold">Precio</h2>
+                            <input
+                              type="number"
+                              name="precio"
+                              id="precios"
+                              placeholder="100.000"
+                              className="h-10 w-full border-b-2 border-b-gray-900 p-2 outline-none"
+                            />
+                          </div>
+                          <div>
+                            <h2 className="text-xl font-bold">Descripción</h2>
+                            <textarea
+                              name="Descirpcion"
+                              id="Descirpcion"
+                              className="h-28 w-full rounded-lg border-2 border-slate-400"
+                            />
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div className="p-3">
-                      <h2 className="text-xl font-bold">Correo</h2>
-                      <input
-                        type="email"
-                        name="Correo"
-                        id="Correo"
-                        readOnly=""
-                        value="Example@gmail.com"
-                        className="h-10 w-full border-b-2 border-[#ababab] p-2 outline-none"
-                      />
-                    </div>
-                    <div className="p-3">
-                      <h2 className="text-xl font-bold">Contraseña</h2>
-                      <input
-                        type="password"
-                        name="Contraseña"
-                        id="Contraseña"
-                        readOnly=""
-                        value="PLANNI"
-                        className="h-10 w-full border-b-2 border-[#ababab] p-2 outline-none"
-                      />
-                    </div>
-                    <div className="p-3">
-                      <h2 className="text-xl font-bold">Telefono</h2>
-                      <input
-                        type="number"
-                        name="Telefono"
-                        id="Telefono"
-                        readOnly=""
-                        value="3100000000"
-                        className="h-10 w-full border-b-2 border-[#ababab] p-2 outline-none"
-                      />
-                    </div>
-                    <div className="col-span-2 p-3">
-                      <h2 className="text-xl font-bold">Dirección</h2>
-                      <input
-                        type="text"
-                        name="Dirección"
-                        id="Dirección"
-                        readOnly=""
-                        value="Cartagena de Indias, Campestre Calle 00c #00-00"
-                        className="h-10 w-full border-b-2 border-[#ababab] p-2 outline-none"
-                      />
-                    </div>
-                  </div>
+                  </form>
                 </AlertDialogDescription>
               </AlertDialogHeader>
               <AlertDialogFooter>
