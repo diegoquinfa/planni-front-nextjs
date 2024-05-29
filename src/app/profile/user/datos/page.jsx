@@ -1,6 +1,6 @@
 const Page = () => {
   return (
-    <div className="flex flex-col md:grid md:grid-cols-2 gap-4 p-3">
+    <div className="flex flex-col gap-4 p-3 md:grid md:grid-cols-2">
       <div className="p-3">
         <h2 className="text-xl font-bold">Nombre de usuario</h2>
         <input
