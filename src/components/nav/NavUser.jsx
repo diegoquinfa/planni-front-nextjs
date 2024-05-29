@@ -29,18 +29,18 @@ export const NavUser = () => {
     <>
       <div className="mb-4 flex h-full w-full flex-col gap-2 p-1 lg:hidden lg:flex-row">
         <Link
-          href="/profile"
+          href="/profile/user/datos"
           className="w-full rounded-3xl border-2 border-brand px-8 py-2 text-center text-brand 
                   transition-all duration-300 ease-in-out hover:scale-105 hover:bg-brand-light lg:w-max"
         >
           Perfil
         </Link>
         <Link
-          href="/favorites"
+          href="/profile/user/favoritos"
           className="w-full rounded-3xl border-2 border-brand px-8 py-2 text-center text-brand 
                   transition-all duration-300 ease-in-out hover:scale-105 hover:bg-brand-light lg:w-max"
         >
-          Favoritos
+          Mis paquetes
         </Link>
         <Dialog>
           <DialogTrigger>
@@ -79,15 +79,23 @@ export const NavUser = () => {
         <DropdownMenu>
           <DropdownMenuTrigger className="ring-none rounded-full">
             <Avatar>
-              <AvatarImage src="https://github.com/shadcn.png" />
+              <AvatarImage src="https://avatars.githubusercontent.com/u/85009282?v=4" />
               <AvatarFallback>CN</AvatarFallback>
             </Avatar>
           </DropdownMenuTrigger>
           <DropdownMenuContent>
             <DropdownMenuLabel>Mi cuenta</DropdownMenuLabel>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>Perfil</DropdownMenuItem>
-            <DropdownMenuItem>Favoritos</DropdownMenuItem>
+            <DropdownMenuItem
+              onClick={() => router.push('/profile/user/datos')}
+            >
+              <Link href="/profile/user/datos">Pefil</Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem
+              onClick={() => router.push('/profile/user/favoritos')}
+            >
+              <Link href={'/profile/user/favoritos'}>Mis paquetes</Link>
+            </DropdownMenuItem>
             <DropdownMenuItem>
               <button
                 onClick={() => signOut()}
