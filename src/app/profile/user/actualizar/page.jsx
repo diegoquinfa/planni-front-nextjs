@@ -110,6 +110,7 @@ const Page = () => {
   return (
     <form
       onSubmit={handleSubmit}
+
       className="flex flex-col gap-4 p-4 md:grid md:grid-cols-2 md:p-3"
     >
       <div className="p-4 md:p-3">

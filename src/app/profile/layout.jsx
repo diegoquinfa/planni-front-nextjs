@@ -73,6 +73,10 @@ export default function PackagesLayout({ children }) {
                 <div className="h-fit rounded-3xl bg-white">{children}</div>
               </ScrollArea>
             </div>
+
+            <ScrollArea className="max-h-[95%] rounded-3xl md:w-[70%]">
+              <div className="h-fit rounded-3xl bg-white">{children}</div>
+            </ScrollArea>
           </div>
         )}
 
@@ -82,39 +86,39 @@ export default function PackagesLayout({ children }) {
             Administrador
           </p>
           <h2 className="text-xl font-bold md:text-3xl">Nombre de usuario</h2>
-          <div className="flex flex-col gap-6 md:h-[90%] md:flex-row">
+          <div className="flex flex-col gap-6 md:h-[92%] md:flex-row">
             <div className="flex w-full p-6 md:max-h-[90%] md:w-[25%]">
               <ul className="flex max-md:flex-wrap-reverse max-md:justify-center max-md:gap-4 md:w-full md:flex-col md:gap-3">
                 <li className="flex">
                   <Link
-                    href="/profile/user/favoritos"
+                    href="/profile/admin/paquetes"
                     className={`rounded-3xl border-2 border-brand px-7 py-2 text-center text-brand transition-all duration-300 hover:bg-brand-light lg:w-max
-                   ${pathname === '/profile/user/favoritos' ? 'rounded-3xl bg-brand px-7 py-2 text-white duration-300 hover:bg-brand-light hover:bg-red-900' : ''}`}
+                   ${pathname === '/profile/admin/paquetes' ? 'rounded-3xl bg-brand px-7 py-2 text-white duration-300 hover:bg-brand-light hover:bg-red-900' : ''}`}
                   >
                     Paquetes
                   </Link>
                 </li>
                 <li className="flex">
                   <Link
-                    href="/profile/user/datos"
+                    href="/profile/admin/crear_paquete"
                     className={`rounded-3xl border-2 border-brand px-7 py-2 text-center text-brand transition-all duration-300 hover:bg-brand-light lg:w-max 
-                  ${pathname === '/profile/user/datos' ? 'rounded-3xl bg-brand px-7 py-2 text-white duration-300 hover:bg-brand-light hover:bg-red-900' : ''}`}
+                  ${pathname === '/profile/admin/crear_paquete' ? 'rounded-3xl bg-brand px-7 py-2 text-white duration-300 hover:bg-brand-light hover:bg-red-900' : ''}`}
                   >
-                    Ver datos
+                    Crear paquetes
                   </Link>
                 </li>
                 <li className="flex">
                   <Link
-                    href="/profile/user/actualizar"
+                    href="/profile/admin/list_user"
                     className={`rounded-3xl border-2 border-brand px-7 py-2 text-center text-brand transition-all duration-300 hover:bg-brand-light lg:w-max 
-                  ${pathname === '/profile/user/actualizar' ? 'rounded-3xl bg-brand px-7 py-2 text-white duration-300 hover:bg-brand-light hover:bg-red-900' : ''}`}
+                  ${pathname === '/profile/admin/list_user' ? 'rounded-3xl bg-brand px-7 py-2 text-white duration-300 hover:bg-brand-light hover:bg-red-900' : ''}`}
                   >
-                    Actualizar datos
+                    Usuarios
                   </Link>
                 </li>
               </ul>
             </div>
-            <ScrollArea className="max-h-[98%] rounded-3xl md:w-[75%]">
+            <ScrollArea className="max-h-[95%] rounded-3xl md:w-[75%]">
               <div className="h-fit rounded-3xl bg-white">{children}</div>
             </ScrollArea>
           </div>

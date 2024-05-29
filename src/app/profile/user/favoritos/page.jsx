@@ -37,6 +37,7 @@ const Page = () => {
 
   return (
     <div className="flex flex-col gap-4 p-4 md:grid md:grid-cols-2">
+
       {packages.map((pack) => (
         <div className="flex w-full flex-col gap-4 rounded-xl bg-white drop-shadow md:p-4">
           <h2 className="text-center text-xl font-bold">{pack?.name_hotels}</h2>
