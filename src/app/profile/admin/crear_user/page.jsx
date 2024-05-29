@@ -10,7 +10,7 @@ const Page = () => {
           type="text"
           name="Nombre de usuario"
           id="Nombre de usuario"
-          value="Jose_45"
+          placeholder="Jose_45"
           className="h-10 w-full border-b-2 border-[#ababab] p-2 outline-none"
         />
       </div>
@@ -20,7 +20,7 @@ const Page = () => {
           type="text"
           name="Nombre"
           id="Nombre"
-          value="Jose"
+          placeholder="Jose"
           className="h-10 w-full border-b-2 border-[#ababab] p-2 outline-none"
         />
       </div>
@@ -30,7 +30,7 @@ const Page = () => {
           type="text"
           name="Apellido"
           id="Apellido"
-          value="Castillo Pérez"
+          placeholder="Castillo Pérez"
           className="h-10 w-full border-b-2 border-[#ababab] p-2 outline-none"
         />
       </div>
@@ -40,7 +40,7 @@ const Page = () => {
           type="email"
           name="Correo"
           id="Correo"
-          value="Example@gmail.com"
+          placeholder="Example@gmail.com"
           className="h-10 w-full border-b-2 border-[#ababab] p-2 outline-none"
         />
       </div>
@@ -50,7 +50,7 @@ const Page = () => {
           type="password"
           name="Contraseña"
           id="Contraseña"
-          value="PLANNI"
+          placeholder="PLANNI"
           className="h-10 w-full border-b-2 border-[#ababab] p-2 outline-none"
         />
       </div>
@@ -60,7 +60,7 @@ const Page = () => {
           type="number"
           name="Telefono"
           id="Telefono"
-          value="3100000000"
+          placeholder="3100000000"
           className="h-10 w-full border-b-2 border-[#ababab] p-2 outline-none"
         />
       </div>
@@ -70,14 +70,14 @@ const Page = () => {
           type="text"
           name="Dirección"
           id="Dirección"
-          value="Cartagena de Indias, Campestre Calle 00c #00-00"
+          placeholder="Cartagena de Indias, Campestre Calle 00c #00-00"
           className="h-10 w-full border-b-2 border-[#ababab] p-2 outline-none"
         />
       </div>
       <div className="col-span-2 p-4 md:p-3 ">
         <div className=" flex w-full justify-center">
           <button className="rounded-3xl border-2 border-brand px-7 py-2 text-center text-brand transition-all duration-300 hover:bg-brand-light lg:w-max">
-            Actualizar
+            Crear
           </button>
         </div>
       </div>
