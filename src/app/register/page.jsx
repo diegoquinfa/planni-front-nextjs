@@ -69,7 +69,7 @@ const Page = () => {
       return
     }
 
-    router.push('/packages')
+    router.push('/profile/user/actualizar')
   }
   return (
     <div className="mx-auto max-w-7xl">
