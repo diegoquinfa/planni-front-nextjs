@@ -30,7 +30,7 @@ const Navbar = () => {
             <img
               src="/logo.svg"
               alt="logo"
-              className="h-14 w-14 max-lg:hidden "
+              className="h-14 w-14 drop-shadow-lg max-lg:hidden"
             />
             <h2 className="w-fit text-3xl font-bold text-brand">PLANNI</h2>
           </div>
@@ -39,7 +39,11 @@ const Navbar = () => {
       <div
         className={`${menu} flex w-full flex-col items-center gap-3 transition-all animate-out sm:w-[40%] md:w-[50%] lg:h-full lg:w-fit`}
       >
-        <img src="/logo.svg" alt="logo" className="h-14 w-14 lg:hidden" />
+        <img
+          src="/logo.svg"
+          alt="logo"
+          className="h-14 w-14 drop-shadow-lg lg:hidden"
+        />
         <div className="flex w-full flex-col-reverse items-center justify-center gap-4 lg:flex-row">
           <div className="flex w-full flex-col gap-2 px-1 lg:flex-row">
             <NavLink href="/">Inicio</NavLink>

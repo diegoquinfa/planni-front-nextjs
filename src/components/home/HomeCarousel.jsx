@@ -28,7 +28,7 @@ const HomeCarousel = ({ cards }) => {
               <div className="h-full cursor-pointer rounded-lg shadow-md">
                 <Card className="h-full overflow-hidden bg-white p-0">
                   <CardContent className="flex h-full flex-col p-0">
-                    <figure className="relative h-[100%] w-full">
+                    <figure className="relative h-[100%] w-full select-none">
                       <img
                         loading="lazy"
                         src={hotel?.imageUrl}
