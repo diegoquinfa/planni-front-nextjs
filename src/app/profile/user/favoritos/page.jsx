@@ -17,12 +17,10 @@ const Page = () => {
         if (session.status === 'loading') {
           await sleep(500)
         }
-
         const url = `${process.env.NEXT_PUBLIC_BACKEND_URL}/user/history/${session?.data?.user?.userId}`
         console.log(url)
         const res = await fetch(url)
         const packs = await res.json()
-
         setPackages(packs)
         console.log(packs)
       } catch (error) {
