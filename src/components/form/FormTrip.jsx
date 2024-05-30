@@ -9,11 +9,21 @@ import {
 } from '@/components/ui/select'
 import DatePicker from '@/components/date/DatePicker'
 import { usePackageStore } from '@/store/usePackageStore'
+import { usePathname, useRouter } from 'next/navigation'
+import {
+  AlertDialog,
+  AlertDialogContent,
+  AlertDialogHeader,
+  AlertDialogTitle
+} from '@/components/ui/alert-dialog'
 
 const FormTrip = () => {
   const setLoading = usePackageStore((state) => state.setLoading)
   const packages = usePackageStore((state) => state.packages)
   const setPackages = usePackageStore((state) => state.setPackages)
+  const isLoading = usePackageStore((state) => state.loading)
+  const pathname = usePathname()
+  const router = useRouter()
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -43,11 +53,11 @@ const FormTrip = () => {
     const packs = await res.json()
     console.log(packs)
 
-
     setLoading(false)
     setPackages(packs.data)
 
     console.log('->', packages)
+    router.push('/packages')
   }
 
   return (
@@ -120,6 +130,19 @@ const FormTrip = () => {
           className="h-full w-full resize-none rounded-lg border-4 border-brand p-2"
         />
       </label>
+      {isLoading && pathname !== '/packages' && (
+        <AlertDialog defaultOpen>
+          <AlertDialogContent>
+            <AlertDialogHeader>
+              <AlertDialogTitle className="text-center">
+                ¡Estamos creando unos paquetes espectaculares, espera un
+                momento!
+              </AlertDialogTitle>
+              <span className="icon-[line-md--loading-loop] mx-auto size-36 bg-brand"></span>
+            </AlertDialogHeader>
+          </AlertDialogContent>
+        </AlertDialog>
+      )}
     </form>
   )
 }

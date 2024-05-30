@@ -46,6 +46,7 @@ export const ConfirmationDialog = () => {
     setIsCompleted(true)
 
     await sleep(3000)
+    router.push('/')
   }
 
   return (
