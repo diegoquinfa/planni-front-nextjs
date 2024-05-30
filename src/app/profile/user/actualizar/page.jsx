@@ -46,7 +46,6 @@ const Page = () => {
         setPassword(user.data[0].password || '')
         setPhone(user.data[0].phone || '')
         setAddress(user.data[0].address || '')
-        setIdRol(user.data[0].id_rol || '')
       } catch (error) {
         console.error('Error fetching user data:', error)
       }
