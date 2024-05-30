@@ -30,57 +30,51 @@ export default function PackagesLayout({ children }) {
 
       {(session?.data?.user?.rolId === 3 ||
         session?.data?.user?.rolId === 1) && (
-          <div className="p-5 md:mx-auto md:h-[calc(100dvh_-_130px)] md:max-w-7xl md:py-5">
-            <p className="inline-block rounded-3xl bg-[#3e3e3e] px-3 py-1 text-white">
-              Usuario
-            </p>
-            <h2 className="text-xl font-bold md:text-3xl">
-              {session?.data?.user?.name}
-            </h2>
-            <div className="flex flex-col gap-6 md:h-[90%] md:flex-row">
-              <div className="flex w-full p-6 md:max-h-[90%] md:w-[50%]">
-                <ul className="flex max-md:flex-wrap-reverse max-md:justify-center max-md:gap-4 md:w-full md:flex-col md:gap-3">
-                  <li className="flex">
-                    <Link
-                      href="/profile/user/favoritos"
-                      className={`rounded-3xl border-2 border-brand px-7 py-2 text-center text-brand transition-all duration-300 hover:bg-brand-light lg:w-max
+        <div className="p-5 md:mx-auto md:h-[calc(100dvh_-_130px)] md:max-w-7xl md:py-5">
+          <p className="inline-block rounded-3xl bg-[#3e3e3e] px-3 py-1 text-white">
+            Usuario
+          </p>
+          <h2 className="text-xl font-bold md:text-3xl">
+            {session?.data?.user?.name}
+          </h2>
+          <div className="flex flex-col gap-6 md:h-[90%] md:flex-row">
+            <div className="flex w-full p-6 md:max-h-[90%] md:w-[50%]">
+              <ul className="flex max-md:flex-wrap-reverse max-md:justify-center max-md:gap-4 md:w-full md:flex-col md:gap-3">
+                <li className="flex">
+                  <Link
+                    href="/profile/user/favoritos"
+                    className={`rounded-3xl border-2 border-brand px-7 py-2 text-center text-brand transition-all duration-300 hover:bg-brand-light lg:w-max
                    ${pathname === '/profile/user/favoritos' ? 'rounded-3xl bg-brand px-7 py-2 text-white duration-300 hover:bg-brand-light hover:bg-red-900' : ''}`}
-                    >
-                      Mis paquetes
-                    </Link>
-                  </li>
-                  <li className="flex">
-                    <Link
-                      href="/profile/user/datos"
-                      className={`rounded-3xl border-2 border-brand px-7 py-2 text-center text-brand transition-all duration-300 hover:bg-brand-light lg:w-max 
+                  >
+                    Mis paquetes
+                  </Link>
+                </li>
+                <li className="flex">
+                  <Link
+                    href="/profile/user/datos"
+                    className={`rounded-3xl border-2 border-brand px-7 py-2 text-center text-brand transition-all duration-300 hover:bg-brand-light lg:w-max 
                   ${pathname === '/profile/user/datos' ? 'rounded-3xl bg-brand px-7 py-2 text-white duration-300 hover:bg-brand-light hover:bg-red-900' : ''}`}
-                    >
-                      Ver datos
-                    </Link>
-                  </li>
-                  <li className="flex">
-                    <Link
-                      href="/profile/user/actualizar"
-                      className={`rounded-3xl border-2 border-brand px-7 py-2 text-center text-brand transition-all duration-300 hover:bg-brand-light lg:w-max 
+                  >
+                    Ver datos
+                  </Link>
+                </li>
+                <li className="flex">
+                  <Link
+                    href="/profile/user/actualizar"
+                    className={`rounded-3xl border-2 border-brand px-7 py-2 text-center text-brand transition-all duration-300 hover:bg-brand-light lg:w-max 
                   ${pathname === '/profile/user/actualizar' ? 'rounded-3xl bg-brand px-7 py-2 text-white duration-300 hover:bg-brand-light hover:bg-red-900' : ''}`}
-                    >
-                      Actualizar datos
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-              <ScrollArea className="max-h-[98%] rounded-3xl md:w-[70%]">
-                <div className="h-fit rounded-3xl bg-white">{children}</div>
-              </ScrollArea>
+                  >
+                    Actualizar datos
+                  </Link>
+                </li>
+              </ul>
             </div>
-<<<<<<< HEAD
-            <ScrollArea className="max-h-[95%] rounded-3xl md:w-[70%]">
+            <ScrollArea className="max-h-[98%] rounded-3xl md:w-[70%]">
               <div className="h-fit rounded-3xl bg-white">{children}</div>
             </ScrollArea>
-=======
->>>>>>> develop-diego
           </div>
-        )}
+        </div>
+      )}
 
       {session?.data?.user?.rolId === 2 && (
         <div className="p-5 md:mx-auto md:h-[calc(100dvh_-_130px)] md:max-w-7xl md:py-5">
@@ -118,18 +112,6 @@ export default function PackagesLayout({ children }) {
                     Usuarios
                   </Link>
                 </li>
-<<<<<<< HEAD
-                <li className="flex">
-                  <Link
-                    href="/profile/admin/crear_user"
-                    className={`rounded-3xl border-2 border-brand px-7 py-2 text-center text-brand transition-all duration-300 hover:bg-brand-light lg:w-max 
-                  ${pathname === '/profile/admin/crear_user' ? 'rounded-3xl bg-brand px-7 py-2 text-white duration-300 hover:bg-brand-light hover:bg-red-900' : ''}`}
-                  >
-                    Crear usuarios
-                  </Link>
-                </li>
-=======
->>>>>>> develop-diego
               </ul>
             </div>
             <ScrollArea className="max-h-[95%] rounded-3xl md:w-[75%]">
